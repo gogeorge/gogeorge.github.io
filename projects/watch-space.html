@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>George | Watch Space</title>
+	<link rel="icon" href="../images/logo background george.png">
+	<style>
+	h2 {
+		font-size: 40px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		border: none;
+		background-color: white;
+		position: relative;
+		top: 0px;
+		-webkit-animation: titleMove 3s;
+		animation: titleMove 3s;
+		}
+
+		@-webkit-keyframes titleMove {
+			0% {top: -75px;}
+			100% {top: 0px;}
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+	#bash {
+		height: 50px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 25px;
+		position: absolute;
+		top: 50px;
+		left: 5%;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		-webkit-transition: color 2s;
+		transition: color 2s;
+		-webkit-transition: font-size 2s;
+		transition: font-size 2s;
+	}
+	#bash:hover {
+		color: purple;
+		font-size: 30px;
+	}
+	#name {
+		height: 50px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 25px;
+		position: absolute;
+		top: 50px;
+		right: 5%;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		-webkit-transition: color 2s;
+		transition: color 2s;
+		-webkit-transition: font-size 2s;
+		transition: font-size 2s;
+		}
+	#name:hover {
+		color: #92005E;
+		font-size: 30px;
+	}
+	p {
+		position: relative;
+		top: 80px;
+		width: 700px;
+		height: 200px;
+		opacity: 1;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 20px;
+		text-indent: 25px;
+		text-align: left;
+		-webkit-animation: opac 4s;
+		animation: opac 4s;
+	}
+	@-webkit-keyframes opac {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+	}
+	a {
+		color: #92005E;
+	}
+	@media screen and (max-device-width: 600px) { 
+		p {font-size: 25px;} 
+	}
+	</style>
+</head>
+<body>
+	<center><h2>Watch Space</h2></center>
+	<a id="name" href="../index.html">George Valtas</a>
+	<a id="bash" href="bash.html">Bash Profile</a>
+	<center>
+		<p>
+			<em>This page and Watch Space are not fully developed</em>
+			<br><br>
+			<a href="../watch-space.html">Visit Watch Space site</a>
+			<br><br>
+			<em style="font-size: 25px;font-weight: normal;">What is Watch Space,</em><br><br>
+			Watch Space is an html site that allows people to see who and what is in space. More precisely, the astronauts and the location of the ISS. Watch Space uses JavaScript and mostly jQuery to obtain information from various JSON files on the internet <sup>[r1]</sup>.
+			<br><br>
+			<em style="font-size: 25px;font-weight: normal;">Source Code,</em><br><br>
+				All the code is available on GitHub, <a href="https://github.com/gogeorge/watch-space" target="_blank">https://github.com/gogeorge/watch-space</a>, under the <span style='color:#92005E'>MIT License</span>
+			<br><br>
+			<em style="font-size: 25px;font-weight: normal;">References,</em><br><br>
+			[r1] <br><br>
+				- <a href="http://open-notify.org/" target="_blank">http://open-notify.org/</a><br><br>
+				- <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
+				<br><br>
+				- <a href="http://api.open-notify.org/astros.json" target="_blank">http://api.open-notify.org/astros.json</a>
+			<br><br>
+			<span style="color: darkgrey">&#8764 February, 2017</span>
+		</p>
+	</center>
+</body>
+</html>

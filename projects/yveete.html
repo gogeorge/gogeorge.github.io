@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>George | Yveete</title>
+		<link rel="icon" href="../images/logo background george.png">
+		<meta charset="UTF-8">
+		<style>
+		#afrodita {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 25px;
+			position: absolute;
+			top: 50px;
+			right: 5%;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			-webkit-transition: color 2s;
+			transition: color 2s;
+			-webkit-transition: font-size 2s;
+			transition: font-size 2s;
+		}
+		#afrodita:hover {
+			color: #92005E;
+			font-size: 30px;
+		}
+		#name {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 25px;
+			position: absolute;
+			top: 50px;
+			left: 5%;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			-webkit-transition: color 2s;
+			transition: color 2s;
+			-webkit-transition: font-size 2s;
+			transition: font-size 2s;
+		}
+		#name:hover {
+			color: #92005E;
+			font-size: 30px;
+		}
+		#yveete {
+			font-size: 40px;
+			font-family: Helvetica;
+			font-weight: lighter;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			border: none;
+			background-color: white;
+			cursor: pointer;
+			position: relative;
+			top: 0px;
+			-webkit-animation: titleMove 3s;
+			animation: titleMove 3s;
+		}
+
+		@-webkit-keyframes titleMove {
+			0% {top: -75px;}
+			100% {top: 0px;}
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		#main p {
+			width: 700px;
+			height: 2000px;
+			font-size: 20px;
+			font-family: Helvetica;
+			font-weight: lighter;
+			opacity: 1;
+			text-align: left;
+			text-indent: 25px;
+			line-height: 26px;
+			-webkit-animation: appearText 2s;
+			animation: appearText 2s;
+		}
+		@-webkit-keyframes appearText {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		code {
+			font-size: 13px;
+			text-align: left;
+			-webkit-animation: appearText 2s;
+			animation: appearText 2s;
+		}
+		@-webkit-keyframes appearText {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		#main {
+			width: 70%;
+			height: 100%;
+			position: absolute;
+			left: 0px;
+			right:0;
+			top:600px;
+			bottom:0px;
+			margin: auto;
+		}
+		#pseudocode {
+			font-size: 20px;
+			text-align: left;
+			position: relative;
+		}
+		/* yveete interface */
+			#dialog {
+				width: 850px;
+				height: 400px;
+				background: ;
+				border-radius: 5px;
+				overflow: hidden;
+				position: relative;
+				overflow-y: scroll;
+				opacity: 1;
+				border: 3px solid deepskyblue;
+				transform: scale(1, 1); 
+				-webkit-animation: dialogMove 3s;
+				animation: dialogMove 3s;
+				-webkit-transition: box-shadow 1s;
+				transition: box-shadow 1s;
+				-webkit-transition: transform 1s;
+				transition: transform 1s;
+				-webkit-transition-timing-function: ease-in-out;
+				z-index: 0;
+			}
+			#dialog:hover {
+				transform: scale(1.025, 1.025);
+				box-shadow: 0px 10px 10px darkgrey;
+				overflow: hidden;
+			}
+
+			@-webkit-keyframes dialogMove {
+				0% {opacity: 0;}
+				100% {opacity: 1;}
+			}
+			@keyframes dialogMove {
+				0% {opacity: 0;}
+				100% {opacity: 1;}
+			}
+			#inputText {
+				z-index: 1;
+				width: 616px;
+				height: 40px;
+				outline: none;
+				border: 2px solid deepskyblue;
+				color: black;
+				border-radius: 5px;
+				font-size: 20px;
+				position: relative;
+				top: 20px;
+				-webkit-animation: txt 2s;
+				animation: txt 2s;
+			}
+			@-webkit-keyframes txt {
+					0% {margin-top: 120px;}
+					100% {margin-top: 0px;}
+			}
+			@keyframes txt {
+					0% {margin-top: 120px;}
+					100% {margin-top: 0px;}
+			}
+			a {
+				color: #92005E;
+			}	
+		@media only screen and (max-device-width: 950px) and (orientation: portrait) {
+			p { 
+			    font-size: 25px;
+				position: relative; 
+				top: -200px;
+			}
+			#main p { height: 1750px;}
+			#pseudocode { display: none;}
+		}
+		@media only screen and (max-device-width: 1100px) {
+			#pseudocode {
+				position: relative;
+				left: -60px;
+			}
+		}
+		</style>
+	</head>
+	<body>
+		<center>
+			<br><br><br>
+			<center><button id="yveete">Yveete</button></center>
+			<a id="name" href="../index.html">George Valtas</a>
+			<a id="afrodita" href="afrodita.html">Afrodita 1.0</a>
+			<br><br><br><br>
+		</center>
+		<div id="main">
+			<center>
+			<code id="pseudocode">
+				if (you == bored to visit the Yveete website) {<br><br>
+				<div id="dialog"></div>
+				<input type="text" id="inputText" value='Then talk to Yveete here' autocapitalize="none"/><br><br><br><br>
+				} else {<br><br>
+				visit the actual website here: <a href="http://yveete.kissr.com" target="_blank">
+				http://yveete.kissr.com</a><br><br>
+				<span style="color: darkgrey">/* the above interface does not include the complete script */</span><br><br>
+			}
+			</code>
+			<p>
+			<br><br><br><br>
+			Yveete is an Intelligent Personal Assistant (IPA) that can perform various internet tasks to help the user such as creating a calendar event, to multitasking and sending emails. Yveete was developed using only JavaScript.
+			<br><br>
+			One day, I didn't now what to do with what I learned from codecademy so I thought of this idea: something like Siri, but with more tasks/commands and fewer conversations. Back then there weren't any digital assistants on computers like now Siri on macOS 10, and Cortana on Windows 10 so I had an advantage of having the program on a computer instead of a smartphone.
+			<br><br>
+			Yveete is now on github, <a href="https://github.com/gogeorge/Yveete" target="_blank">https://github.com/gogeorge/Yveete</a>, under the <span style='color:#92005E'>GPL 3.0 License</span><br><br>
+			<em style="font-size: 25px;font-weight: normal;">How it works,</em><br><br>
+				Yveete's JavaScript is mainly if/else and else if statements. For example this is how to make a very simple interaction where the user types "hi" and Yveete replies with "hey":
+				<br><br>
+				<code>if (question == "hi") {<br>&nbsp&nbsp&nbsp answer = "hey"; <br> }
+				</code>
+				<br><br>
+				Now to add a voice you can do this:
+				<br><br>
+				<code>if (question == "hi") { <br>&nbsp&nbsp&nbsp var msg = new SpeechSynthesisUtterance('hey');<br>&nbsp&nbsp&nbsp window.speechSynthesis.speak(msg);<br>&nbsp&nbsp&nbsp answer = "hey"; <br> }
+				</code>
+				<br><br>
+				The code can be changed so the user can type "hi" <em>and</em> "hello":
+				<br><br>
+				<code>if (question.toUpperCase() == "HI" || question.toUpperCase() == "HELLO") { <br>&nbsp&nbsp&nbsp var msg = new SpeechSynthesisUtterance('hey');<br>&nbsp&nbsp&nbsp window.speechSynthesis.speak(msg);<br>&nbsp&nbsp&nbsp answer = "hey"; <br> }
+				</code>
+				<br><br>
+				Here is a more complex if/else statement where the user types their name and Yveete remembers it:
+				<br><br>
+				<code>
+					if (question.match(".*\\bmy name is\\b.*")) {<br>
+						&nbsp&nbsp&nbsp//if what the user types matches the string 'my name is' then:<br>
+						&nbsp&nbsp&nbspvar userName = question.substring(11);<br>
+						&nbsp&nbsp&nbsp//save the name by extracting the substring after the 11th character<br>
+						&nbsp&nbsp&nbspif (userName.match(/[0-9]/i)) {<br>
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp//if the user typed only numbers or included a number in their name then:<br>
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp var msg1 = new SpeechSynthesisUtterance('Please type your name in letters only');<br> 
+ 						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp window.speechSynthesis.speak(msg1);<br> 
+ 						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp answer = "Please type your name in letters only";<br>
+						&nbsp&nbsp&nbsp}<br>
+						&nbsp&nbsp&nbspelse if ((userName != null) && (userName.match(/[a-z]/i))) {<br>
+						&nbsp&nbsp&nbsp&nbsp&nbsp// if the user typed a name and it is in letters then:<br>
+						&nbsp&nbsp&nbsp&nbsp&nbsp var msg2 = new SpeechSynthesisUtterance('I will remember your name as ' + &nbsp&nbsp&nbsp&nbsp&nbsp&nbspuserName); <br>
+ 						&nbsp&nbsp&nbsp&nbsp&nbsp window.speechSynthesis.speak(msg2); <br>
+						&nbsp&nbsp&nbsp&nbsp&nbsp localStorage.setItem('userName', userName);<br>
+						&nbsp&nbsp&nbsp&nbsp&nbsp answer = "I will remember you as " + userName;<br>
+						&nbsp&nbsp&nbsp} <br>
+						&nbsp&nbsp&nbspelse if (userName == null) {<br>
+						&nbsp&nbsp&nbsp&nbsp&nbsp answer = "You didn't type your name";<br>
+						&nbsp&nbsp&nbsp}<br>
+					}<br>
+				</code>
+				<br><br>
+			<span style="color: darkgrey">&#8764 March, 2016</span>
+			</p>
+			</center>
+		</div>
+
+	</body>
+	<script src="../scripts/yveeteLite.js"></script>
+</html>

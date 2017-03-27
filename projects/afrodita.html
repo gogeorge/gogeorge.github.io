@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>George | Afrodita 1.0</title>
+	<link rel="icon" href="../images/logo background george.png">
+	<style>
+	h2 {
+		font-size: 40px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		border: none;
+		background-color: white;
+		position: relative;
+		top: 0px;
+		-webkit-animation: titleMove 3s;
+		animation: titleMove 3s;
+		}
+		h2:hover {color: #92005E;}
+
+		@-webkit-keyframes titleMove {
+			0% {top: -75px;}
+			100% {top: 0px;}
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+	#yveete {
+		height: 50px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 25px;
+		position: absolute;
+		top: 50px;
+		left: 5%;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		-webkit-transition: color 2s;
+		transition: color 2s;
+		-webkit-transition: font-size 2s;
+		transition: font-size 2s;
+	}
+	#yveete:hover {
+		color: purple;
+		font-size: 30px;
+	}
+	#bash {
+		height: 50px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 25px;
+		position: absolute;
+		top: 50px;
+		right: 5%;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		-webkit-transition: color 2s;
+		transition: color 2s;
+		-webkit-transition: font-size 2s;
+		transition: font-size 2s;
+		}
+	#bash:hover {
+		color: #92005E;
+		font-size: 30px;
+	}
+	p {
+		position: relative;
+		top: 80px;
+		width: 700px;
+		height: 200px;
+		opacity: 1;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 20px;
+		text-indent: 25px;
+		text-align: left;
+		-webkit-animation: opac 4s;
+		animation: opac 4s;
+	}
+	@-webkit-keyframes opac {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+	}
+	a {
+		color: #92005E;
+	}
+	@media screen and (max-device-width: 600px) { 
+		p {font-size: 25px;} 
+	}
+	</style>
+</head>
+<body>
+	<center><h2>Afrodita 1.0</h2></center>
+	<a id="yveete" href="yveete.html">Yveete</a>
+	<a id="bash" href="bash.html">Bash Profile</a>
+	<center>
+		<p>Afrodita 1.0 is a space settlement that was made for the Nasa Ames contest. It is supposed to be located in the Langrange 4 (Earth-Moon system) and it's consisted of 3 toruses which provide pseudo gravity to accommodate &#8764 30 000 inhabitants.
+		<br><br><em>Afrodita 1.0 was a project in the NASA Ames Space Settlement Contest 2016 that received the 3rd place. The 90-paged project was written by Maria Disli, Andrei Lu, Filip Gkogkos, George Valtas and Nicolas Mantescu</em><br><br>
+		<a href="../images/Afrodita-1.0.pdf" target="_blank">View the PDF Version here</a>
+		<br><br><br><br>
+		<span style="color: darkgrey">&#8764 May, 2016</span>
+		</p>
+	</center>
+</body>
+<script>
+var button = document.getElementById('btn');
+var pdf = document.getElementById('pdf');
+button.onclick = function() {
+	pdf.style.visibility = "visible";
+	button.innerHTML = "Hide PDF File";
+}
+button.ondblclick = function() {
+	pdf.style.visibility = "hidden";
+	document.getElementById('btn').innerHTML = "Show PDF File";
+}
+
+</script>
+</html>

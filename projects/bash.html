@@ -1,0 +1,195 @@
+<html>
+	<header>
+		<title>George | Bash Profile</title>
+		<link rel="icon" href="images/logo background george.png"/>
+		<meta charset="UTF-8">
+		<style>
+		h2 {
+			font-size: 40px;
+			font-family: Helvetica;
+			font-weight: lighter;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			border: none;
+			background-color: white;
+			position: relative;
+			top: 20px;
+			-webkit-animation: titleMove 3s;
+			animation: titleMove 3s;
+		}
+
+		@-webkit-keyframes titleMove {
+			0% {top: -75px;}
+			100% {top: 20px;}
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		#space {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 25px;
+			position: absolute;
+			top: 50px;
+			right: 5%;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			-webkit-transition: color 2s;
+			transition: color 2s;
+			-webkit-transition: font-size 2s;
+			transition: font-size 2s;
+		}
+		#space:hover {
+			color: purple;
+			font-size: 30px;
+		}
+		#afrodita {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 25px;
+			position: absolute;
+			top: 50px;
+			left: 5%;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			-webkit-transition: color 2s;
+			transition: color 2s;
+			-webkit-transition: font-size 2s;
+			transition: font-size 2s;
+		}
+		#afrodita:hover {
+			color: purple;
+			font-size: 30px;
+		}
+		/* coomand line */
+		#command_line {
+			width: 700px;
+			height: 320px;
+			background-color: black;
+			border-radius: 5px;
+			position: relative;
+			top: 70px;
+			overflow-y: scroll;
+			overflow: hidden;
+			box-shadow:;
+			transform: scale(1, 1);
+			-webkit-transition: box-shadow 3s;
+			-webkit-transition: transform 0.5s;
+		}
+		#command_line:hover {
+			box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+			transform: scale(1.02, 1.02);
+		}
+		#cmd_header {
+			width: 700px;
+			height: 25px;
+			/*background-color: lightgrey;*/
+			background: -webkit-linear-gradient(#EBE3E0,lightgrey);
+			font-family: courier;
+			font-size: 15px;
+			position: relative;
+			top: -15px;
+		}
+		#cmd_title {
+			position: relative;
+			top: 3px;
+			text-align: center;
+			font-family: courier;
+			font-size: 15px;
+		}
+		#cmd_interface {
+			width: 700px;
+			height: 260px;
+			background-color: transparent;
+			color: lightgreen;
+			position: relative;
+			top: -15px;
+			left: 5px;
+			border: none;
+   			resize: none;
+    		outline: none;
+    		font-family: courier;
+    		font-size: 14px;
+    		text-indent: 0px;
+		}
+		p {
+			text-align: left;
+			text-indent: 25px;
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 20px;
+			width: 700px;
+			height: 900px;
+			position: relative;
+			top: 140px;
+			opacity: 1;
+			color: ;
+			-webkit-animation: opacity 4s;
+			animation: opacity 4s;
+		}
+		@-webkit-keyframes opacity {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		@-keyframes opacity {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		a {
+			color: #92005E;
+		}
+		code {
+			background: rgba(0, 0, 0, 0.025);
+			-webkit-animation: appearText 2s;
+			animation: appearText 2s;
+		}
+		@-webkit-keyframes appearText {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		@media only screen and (max-device-width: 600px) and (orientation: portrait) {
+			p { font-size: 25px;}
+		}
+		</style>
+	</header>
+	<body>
+	<center><h2>Bash Profile</h2></center>
+	<a id="afrodita" href="afrodita.html">Afrodita 1.0</a>
+	<a id="space" href="watch-space.html">Watch Space</a>
+	<center>
+		<div id="command_line">
+			<div id="cmd_header"><p id="cmd_title">Bash Profile - 600 x 280</p></div>
+			<p id="cmd_interface"></p>
+		</div>
+		<p>People use the command lines so that they have a better control over their computers. A bash profile makes it easier for people to use the Terminal app and the Bash shell. By creating a bash profile you customize the command line and give easier names to commands. As you can see from the animated command line above, this bash profile simplifies the commands and makes them easier to remember for example instead of <code>ls -l</code> there you can use <code>list</code>.Ideally instead of a long command such as <code>python -m SimpleHTTPServer</code>, you can use <code>localhost</code>.<br/><br/>
+		You can find this bash profile on
+		<a href="https://github.com/gogeorge/bash-profile" target="_blank">https://github.com/gogeorge/bash-profile</a> and it has <span style='color:#92005E'>no license</span>.
+		<br/><br/>
+		<em style="font-size: 25px;font-weight: normal;">Installation,</em>
+		<br/><br/>
+		*This can only be installed If you have a platform which runs on macOS like a macbook/iMac or Linux<br/>
+		*This profile works best on a black background and green text theme. You can customize your theme by going to Terminal > Preferences
+		<br/><br/>
+		1.) open terminal and type the following:
+		<br/><br/>
+		<code>nano ~/.bash_profile</code>
+		<br/><br/>
+		2.) Then copy the code from the Github file named 'source.bash' and paste it in the nano editor (in the command line)
+		<br/><br/>
+		3.) press <em>ctrl + o</em> (to save the file), then <em>enter</em> and then <em>ctrl + x</em> to exit the nano editor
+		<br/><br/>
+		4.) To enable the profile type the following:
+		<br/><br/>
+		<code>source ~/.bash_profile</code>
+		<br/><br/><br/><br/>
+		<span style="color: darkgrey">&#8764 August, 2016</span>
+		</p>
+	</center>
+</body>	
+<script src="../scripts/bashAnimation.js"></script>
+</html>
