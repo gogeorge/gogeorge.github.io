@@ -421,6 +421,20 @@
 			top: 467%;
 			background-color: white;
 		}
+		#bday_event {
+			font-family: "Brush Script MT", cursive;
+			font-size: 26px;
+			color: #92005E;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 500;
+			line-height: 26.4px;
+			position: relative;
+			top: -180px;
+			left: 255px;
+			opacity: 0;
+			-webkit-transition: top 1s;
+		}
 		/* mobile size */
 		@media screen and (max-device-width: 600px) and (orientation: portrait) {
 			html { zoom: 1.5;}

@@ -75,7 +75,7 @@
 	function myFunction2() {
     document.getElementById("myDropdown2").classList.toggle("show2");
 	}
-		window.onclick = function(event2) {
+	window.onclick = function(event2) {
 	  if (!event2.target.matches('.dropbtn2')) {
 
 	    var dropdowns2 = document.getElementsByClassName("dropdown-content2");
@@ -88,3 +88,14 @@
 	    }
 	  }
 	}
+	//birthday event
+	var d = new Date();
+	var now = d.getDate() + "" + d.getMonth();
+	if (now == "192") {
+		setTimeout(function() {
+			bday_event.style.opacity = "1";
+			bday_event.style.top = "80";
+			bday_event.style.transform = "rotate(30deg)";
+		}, 3000);
+	} 
+
