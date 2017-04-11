@@ -178,7 +178,7 @@ var longitude = localStorage.getItem('longitude');
 var possibleError = localStorage.getItem('possibleError');
 
 var space = new XMLHttpRequest();
-space.open("GET", "http://api.open-notify.org/astros.json", "jsonp");
+space.open("GET", "https://api.open-notify.org/astros.json", "jsonp");
 space.send(null);
 space.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
@@ -203,7 +203,7 @@ space.onreadystatechange = function() {
 }
 
 function issLocation() {
-    $.getJSON('//api.open-notify.org/iss-now.json?callback=?', function(data) {
+    $.getJSON('https://api.open-notify.org/iss-now.json?callback=?', function(data) {
         var latitude = data['iss_position']['latitude'];
         var longitude = data['iss_position']['longitude'];
         localStorage.setItem('latitude', latitude);
@@ -220,8 +220,8 @@ issLocation();
 
 function getISSPlaceOcean() {
 	var lat = document.getElementById('iss_latitude').innerHTML;
-var lng = document.getElementById('iss_longitude').innerHTML;
-	$.getJSON('api.geonames.org/oceanJSON?lat=' + lat + '&lng=' + lng + '&username=gogeorge', function(data) {
+	var lng = document.getElementById('iss_longitude').innerHTML;
+	$.getJSON('https://api.geonames.org/oceanJSON?lat=' + lat + '&lng=' + lng + '&username=gogeorge', function(data) {
 		//alert('http://api.geonames.org/oceanJSON?lat=' + lat + '&lng=' + lng + '&username=gogeorge');
 		if (data['ocean']['name'] != null/* || data['ocean']['name'] != undefined*/) {
 			var place = data['ocean']['name'];
@@ -232,7 +232,7 @@ var lng = document.getElementById('iss_longitude').innerHTML;
 		}
 		else {
 			function getISSPlaceLand() {
-				$.getJSON('api.geonames.org/findNearbyJSON?lat=' + lat + '&lng=' + lng + '&username=gogeorge', function(data) {
+				$.getJSON('https://api.geonames.org/findNearbyJSON?lat=' + lat + '&lng=' + lng + '&username=gogeorge', function(data) {
 					//alert('http://api.geonames.org/findNearbyJSON?lat=' + lat + '&lng=' + lng + '&username=gogeorge');				localStorage.removeItem('possibleError', possibleError);
 					var placeCountry = data['geonames']['countryName'];
 					var placeCity = data['geonames']['name'];
