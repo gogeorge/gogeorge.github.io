@@ -78,6 +78,11 @@
 				width: 1200px;
 				height: 800px;
 				visibility: hidden;
+				font-family: Helvetica;
+				font-weight: lighter;
+				font-size: 15px;
+				color: white;
+				text-align: center;
 			}
 			@media (max-device-width: 600px) {
 				#map { display: none;}
