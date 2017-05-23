@@ -3,6 +3,7 @@ var cmdTitle = document.getElementById('cmd_title');
 //command line animation
 window.onload = function() { bashAnimation();}
 function bashAnimation() {
+	cmdTitle.innerHTML = "Bash Profile - 600 x 280";
 	var d = new Date();
 	var ps1 = "<span style='color:magenta;'>" + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + 
 			  "</span> <span style='color:orange;'>@</span><span style='color:blue;'>desktop</span> <span style='color:cyan;'> - </span><span style='color: yellow;'>admin</span><br><span style='color: red';>$</span>";
