@@ -1,5 +1,5 @@
 		#all_body {
-			height: 470%;
+			height: 400%;
 		}
 		#firstPage {
 			position: absolute;
@@ -434,6 +434,11 @@
 			left: 255px;
 			opacity: 0;
 			-webkit-transition: top 1s;
+		}
+		#confetti {
+			visibility: hidden;
+			opacity: 0;
+			-webkit-transition: opacity 1s;
 		}
 		/* mobile size */
 		@media screen and (max-device-width: 600px) and (orientation: portrait) {

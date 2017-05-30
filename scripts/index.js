@@ -1,6 +1,3 @@
-	document.getElementById('fiverr').addEventListener('click', function() { 
-		window.open('https://www.fiverr.com/theworkhelper'); 
-	});
 	document.getElementById('gmail').addEventListener('click', function() { 
 		window.open('mailto:george.valtas.isb@gmail.com?'); 
 	});
@@ -46,7 +43,6 @@
 	proYveete.onmouseout = function() {
 		img1.style.visibility = "hidden";
 	}
-
 	proAfrodita.onmouseover = function() {
 		img2.style.visibility = "visible";
 	}
@@ -60,10 +56,10 @@
 		img3.style.visibility = "hidden";
 	}
 	portofolio.onmouseover = function() {
-		img21.style.visibility = "visible";
+		portofolio.innerHTML = "This is page is not public";
 	}
 	portofolio.onmouseout = function() {
-		img21.style.visibility = "hidden";
+		portofolio.innerHTML = "Portofolio";
 	}
 	fiverr.onmouseover = function() {
 		img22.style.visibility = "visible";
@@ -90,12 +86,18 @@
 	}
 	//birthday event
 	var d = new Date();
-	var now = d.getDate() + "" + d.getMonth();
-	if (now == "192") {
+	var now = d.getDate() + "" + (d.getMonth() + 1);
+	if (now == "193") {
 		setTimeout(function() {
 			bday_event.style.opacity = "1";
 			bday_event.style.top = "80";
 			bday_event.style.transform = "rotate(30deg)";
 		}, 3000);
-	} 
+		setTimeout(function() {
+			confetti.style.visibility = "visible";
+			confetti.style.opacity = "1";
+		}, 3500);
+	} else { 
+		confetti.style.visibility = "hidden";
+	}
 
