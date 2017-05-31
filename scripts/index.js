@@ -4,10 +4,6 @@
 	document.getElementById('github').addEventListener('click', function() { 
 		window.open('https://github.com/gogeorge'); 
 	});
-	
-	function proScroll() { window.scrollBy(0, window.innerHeight); }
-	function workScroll() { window.scrollTo(0, (window.innerHeight)*2.5); }
-	function aboutScroll() { window.scrollTo(0, (window.innerHeight)*3.75); }
 
 	function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");

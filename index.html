@@ -21,10 +21,10 @@
 				<div id="full_info">
 					<div class="info">High School Student | Programmer | Something</div><br/>
 					<div class="list">
-						<ul>
-							<li><a onclick="proScroll();">Projects</a></li> 
-							<li><a onclick="workScroll();">Work</a></li> 
-							<li><a onclick="aboutScroll();">About</a></li>
+						<ul> 
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#work">Work</a></li> 
+							<li><a href="#about">About</a></li>
 						</ul>
 					</div>
 				</div>		
@@ -32,9 +32,12 @@
 			<div id="vert_line"></div>
 			<div id="hor_line"></div>
 			<div class="dropdown">
-	 			<button onclick="myFunction()" class="dropbtn">Projects</button>	
+	 			<p id="projects">
+	 				<button onclick="myFunction()" class="dropbtn">Projects</button>
+	 			</p>	
 			</div>
 			<div id="myDropdown" class="dropdown-content">
+
 		    	<a id="pro-yveete" href="projects/yveete.html">Yveete</a>
 		    	<a id="pro-afrodita" href="projects/afrodita.html">Afrodita 1.0</a>
 		    	<a id="pro-bash-profile" href="projects/bash.html">Bash Profile</a>
@@ -45,7 +48,9 @@
 		  	<img id="img3" src="images/bash_img.JPG"/>
 			<div id="vert_line2"></div>
 			<div class="dropdown2">
-	 			<button onclick="myFunction2()" class="dropbtn2">Work</button>	
+	 			<p id="work">
+	 				<button onclick="myFunction2()" class="dropbtn2">Work</button>
+	 			</p>	
 			</div>
 			<div id="myDropdown2" class="dropdown-content2">
 		    	<a id="work-portofolio">Portofolio</a>
@@ -55,7 +60,9 @@
 			<div id="trial">
 				<div id="vert_line3"></div>
 			</div>
-			<a id="about" href="about.html">About</a>
+			<p id="about">
+				<a id="about" href="about.html">About</a>
+			</p>
 		</div>
 			<div id="footer">Website and Graphics were developed / designed by <span style="color:#92005E;font-size:12px;">George Valtas</span></div>	
 	</body>
