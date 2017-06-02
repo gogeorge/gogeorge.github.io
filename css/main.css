@@ -1,3 +1,6 @@
+		* { 
+			overflow-x: hidden;
+		}
 		#all_body {
 			height: 400%;
 		}
