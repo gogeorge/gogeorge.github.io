@@ -1,8 +1,6 @@
-		* { 
-			overflow-x: hidden;
-		}
 		#all_body {
 			height: 400%;
+			overflow-x: hidden;
 		}
 		#firstPage {
 			position: absolute;
