@@ -81,14 +81,16 @@
 	  }
 	}
 
-	/*importPic.onclick = function() {
-		importedImg.src = "http://georgevaltas.kissr.com/low_poly_earth.png";
-	}*/
 	setInterval(function() {
 		if (window.location.href.match('.*\\bprojects\\b.*')) {
 			img1.src = "http://georgevaltas.kissr.com/IMG_0441.JPG";
 			img2.src = "http://georgevaltas.kissr.com/nasa front cover landscape.jpg";
 			img3.src = "http://georgevaltas.kissr.com/bash_img.JPG";
+		}
+	}, 500);
+	setInterval(function() {
+		if (window.location.href.match('.*\\bwork\\b.*')) {
+			img22.src = "http://georgevaltas.kissr.com/logo background george.jpg";
 		}
 	}, 500);
 
@@ -97,6 +99,7 @@
 	var d = new Date();
 	var now = d.getDate() + "" + (d.getMonth() + 1);
 	if (now == "193") {
+		confetti.src = "http://georgevaltas.kissr.com/confetti.gif";
 		setTimeout(function() {
 			bday_event.style.opacity = "1";
 			bday_event.style.top = "80";
