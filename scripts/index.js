@@ -82,14 +82,14 @@
 	}
 
 	setInterval(function() {
-		if (window.location.href.match('.*\\bprojects\\b.*') || proj_btn.onclick) {
+		if (window.location.href.match('.*\\bprojects\\b.*')) {
 			img1.src = "http://georgevaltas.kissr.com/IMG_0441.JPG";
 			img2.src = "http://georgevaltas.kissr.com/nasa front cover landscape.jpg";
 			img3.src = "http://georgevaltas.kissr.com/bash_img.JPG";
 		}
 	}, 500);
 	setInterval(function() {
-		if (window.location.href.match('.*\\bwork\\b.*') || work_btn.onclick) {
+		if (window.location.href.match('.*\\bwork\\b.*')) {
 			img22.src = "http://georgevaltas.kissr.com/logo background george.jpg";
 		}
 	}, 500);
