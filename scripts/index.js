@@ -11,7 +11,6 @@
 
 	window.onclick = function(event) {
 	  if (!event.target.matches('.dropbtn')) {
-
 	    var dropdowns = document.getElementsByClassName("dropdown-content");
 	    var i;
 	    for (i = 0; i < dropdowns.length; i++) {
@@ -69,7 +68,6 @@
 	}
 	window.onclick = function(event2) {
 	  if (!event2.target.matches('.dropbtn2')) {
-
 	    var dropdowns2 = document.getElementsByClassName("dropdown-content2");
 	    var i;
 	    for (i = 0; i < dropdowns2.length; i++) {
@@ -80,21 +78,14 @@
 	    }
 	  }
 	}
-
-	setInterval(function() {
-		if (window.location.href.match('.*\\bprojects\\b.*')) {
-			img1.src = "http://georgevaltas.kissr.com/IMG_0441.JPG";
-			img2.src = "http://georgevaltas.kissr.com/nasa front cover landscape.jpg";
-			img3.src = "http://georgevaltas.kissr.com/bash_img.JPG";
-		}
-	}, 500);
-	setInterval(function() {
-		if (window.location.href.match('.*\\bwork\\b.*')) {
-			img22.src = "http://georgevaltas.kissr.com/logo background george.jpg";
-		}
-	}, 500);
-
-
+	proj_btn.onmouseover = function() {
+		img1.src = "http://georgevaltas.kissr.com/IMG_0441.JPG";
+		img2.src = "http://georgevaltas.kissr.com/nasa front cover landscape.jpg";
+		img3.src = "http://georgevaltas.kissr.com/bash_img.JPG";
+	}
+	work_btn.onmouseover = function() {
+		img22.src = "http://georgevaltas.kissr.com/logo background george.jpg";
+	}
 	//birthday event
 	var d = new Date();
 	var now = d.getDate() + "" + (d.getMonth() + 1);
