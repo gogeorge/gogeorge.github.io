@@ -238,7 +238,7 @@
 						else if (userName == null) {
 							var msg1 = new SpeechSynthesisUtterance("I don't know your name");
 	    					window.speechSynthesis.speak(msg1);
-	    					answer = "I do not know your name, if you want to tell it to me type 'remember my name'";
+	    					answer = "I do not know your name, if you want to tell it to me type 'my name is...'";
 						}
 					}
  					//i am <age> years old
