@@ -78,7 +78,6 @@
 			font-weight: lighter;
 			opacity: 1;
 			text-align: left;
-			text-indent: 25px;
 			line-height: 26px;
 			-webkit-animation: appearText 2s;
 			animation: appearText 2s;
@@ -87,10 +86,10 @@
 			0% {opacity: 0;}
 			100% {opacity: 1;}
 		}
-		code:not('.javascript') {
-			font-size: 18px;
+		code:not(.javascript) {
+			font-size: 28px;
 			text-indent: 10px;
-			text-align: left;
+			text-align: center;
 			-webkit-animation: appearText 2s;
 			animation: appearText 2s;
 		}
@@ -120,8 +119,15 @@
 		#hasStringParam2 { visibility: hidden; color: #b32d00; }
 		#brackets { color: black; }
 		#comment { color: darkgrey; text-indent: 20px; } 
-		@media only screen and (max-device-width: 950px) and (orientation: portrait) {
-			
+		@media only screen and (max-device-width: 600px) and (orientation: portrait) {
+			#pseudocode {
+				font-size: 8px;
+			}
+		}
+		@media only screen and (max-device-width: 700px) and (orientation: landscape) {
+			#pseudocode {
+				font-size: 11px;
+			}
 		}
 		</style>
 	</head>
