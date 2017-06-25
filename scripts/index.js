@@ -44,18 +44,18 @@
 	proAfrodita.onmouseout = function() {
 		img2.style.visibility = "hidden";
 	}
-	proBash.onmouseover = function() {
+/*	proBash.onmouseover = function() {
 		img3.style.visibility = "visible";
 	}
 	proBash.onmouseout = function() {
 		img3.style.visibility = "hidden";
-	}
-	portofolio.onmouseover = function() {
+	}*/
+	/*portofolio.onmouseover = function() {
 		portofolio.innerHTML = "This is page is not public";
 	}
 	portofolio.onmouseout = function() {
 		portofolio.innerHTML = "Portofolio";
-	}
+	}*/
 	fiverr.onmouseover = function() {
 		img22.style.visibility = "visible";
 	}
@@ -78,6 +78,7 @@
 	    }
 	  }
 	}
+	//loading images from another site
 	proj_btn.onmouseover = function() {
 		img1.src = "http://georgevaltas.kissr.com/IMG_0441.JPG";
 		img2.src = "http://georgevaltas.kissr.com/nasa front cover landscape.jpg";

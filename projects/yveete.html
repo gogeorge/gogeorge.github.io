@@ -4,6 +4,9 @@
 		<title>George | Yveete</title>
 		<link rel="icon" href="../images/logo background george.png">
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../css/github.css">
+		<script src='../scripts/highlight.pack.js'></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 		<style>
 		#afrodita {
 			font-family: Helvetica;
@@ -25,7 +28,7 @@
 			color: #92005E;
 			font-size: 30px;
 		}
-		#name {
+		#watchspace {
 			font-family: Helvetica;
 			font-weight: lighter;
 			font-size: 25px;
@@ -41,7 +44,7 @@
 			-webkit-transition: font-size 2s;
 			transition: font-size 2s;
 		}
-		#name:hover {
+		#watchspace:hover {
 			color: #92005E;
 			font-size: 30px;
 		}
@@ -70,7 +73,6 @@
 		}
 		#main p {
 			width: 700px;
-			height: 2000px;
 			font-size: 20px;
 			font-family: Helvetica;
 			font-weight: lighter;
@@ -94,16 +96,6 @@
 		@-webkit-keyframes appearText {
 			0% {opacity: 0;}
 			100% {opacity: 1;}
-		}
-		#main {
-			width: 70%;
-			height: 100%;
-			position: absolute;
-			left: 0px;
-			right:0;
-			top:600px;
-			bottom:0px;
-			margin: auto;
 		}
 		#pseudocode {
 			font-size: 20px;
@@ -159,6 +151,9 @@
 				-webkit-animation: txt 2s;
 				animation: txt 2s;
 			}
+			pre {
+				width: 900px;				
+			}
 			@-webkit-keyframes txt {
 					0% {margin-top: 120px;}
 					100% {margin-top: 0px;}
@@ -176,7 +171,10 @@
 				position: relative; 
 				top: -200px;
 			}
-			#main p { height: 1750px;}
+			pre {
+				position: relative;
+				top: -200px;
+			}
 			#pseudocode { display: none;}
 		}
 		@media only screen and (max-device-width: 1100px) {
@@ -191,7 +189,7 @@
 		<center>
 			<br><br><br>
 			<center><button id="yveete">Yveete</button></center>
-			<a id="name" href="../index.html">George Valtas</a>
+			<a id="watchspace" href="watch-space.html">Watch Space</a>
 			<a id="afrodita" href="afrodita.html">Afrodita 1.0</a>
 			<br><br><br><br>
 		</center>
@@ -217,50 +215,65 @@
 			<em style="font-size: 25px;font-weight: normal;">How it works,</em><br><br>
 				Yveete's JavaScript is mainly if/else and else if statements. For example this is how to make a very simple interaction where the user types "hi" and Yveete replies with "hey":
 				<br><br>
-				<code>if (question == "hi") {<br>&nbsp&nbsp&nbsp answer = "hey"; <br> }
-				</code>
+				<pre><code>
+	if (question == "hi") {
+		answer = "hey";
+	}
+				</code></pre>
 				<br><br>
-				Now to add a voice you can do this:
+				<p>Now to add a voice you can do this:</p>
 				<br><br>
-				<code>if (question == "hi") { <br>&nbsp&nbsp&nbsp var msg = new SpeechSynthesisUtterance('hey');<br>&nbsp&nbsp&nbsp window.speechSynthesis.speak(msg);<br>&nbsp&nbsp&nbsp answer = "hey"; <br> }
-				</code>
+				<pre><code>
+	if (question == "hi") { 
+		var msg = new SpeechSynthesisUtterance('hey');
+		window.speechSynthesis.speak(msg);
+		answer = "hey";
+	}
+				</code></pre>
 				<br><br>
-				The code can be changed so the user can type "hi" <em>and</em> "hello":
+				<p>The code can be changed so the user can type "hi" <em>or</em> "hello":</p>
 				<br><br>
-				<code>if (question.toUpperCase() == "HI" || question.toUpperCase() == "HELLO") { <br>&nbsp&nbsp&nbsp var msg = new SpeechSynthesisUtterance('hey');<br>&nbsp&nbsp&nbsp window.speechSynthesis.speak(msg);<br>&nbsp&nbsp&nbsp answer = "hey"; <br> }
-				</code>
+				<pre><code>
+	if (question.toUpperCase() == "HI" || question.toUpperCase() == "HELLO") { 
+		var msg = new SpeechSynthesisUtterance('hey');
+		window.speechSynthesis.speak(msg); 
+		answer = "hey";
+	}
+				</code></pre>
 				<br><br>
-				Here is a more complex if/else statement where the user types their name and Yveete remembers it:
+				<p>Here is a more complex if/else statement where the user types their name and Yveete remembers it:</p>
 				<br><br>
+				<pre>
 				<code>
-					if (question.match(".*\\bmy name is\\b.*")) {<br>
-						&nbsp&nbsp&nbsp//if what the user types matches the string 'my name is' then:<br>
-						&nbsp&nbsp&nbspvar userName = question.substring(11);<br>
-						&nbsp&nbsp&nbsp//save the name by extracting the substring after the 11th character<br>
-						&nbsp&nbsp&nbspif (userName.match(/[0-9]/i)) {<br>
-						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp//if the user typed only numbers or included a number in their name then:<br>
-						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp var msg1 = new SpeechSynthesisUtterance('Please type your name in letters only');<br> 
- 						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp window.speechSynthesis.speak(msg1);<br> 
- 						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp answer = "Please type your name in letters only";<br>
-						&nbsp&nbsp&nbsp}<br>
-						&nbsp&nbsp&nbspelse if ((userName != null) && (userName.match(/[a-z]/i))) {<br>
-						&nbsp&nbsp&nbsp&nbsp&nbsp// if the user typed a name and it is in letters then:<br>
-						&nbsp&nbsp&nbsp&nbsp&nbsp var msg2 = new SpeechSynthesisUtterance('I will remember your name as ' + &nbsp&nbsp&nbsp&nbsp&nbsp&nbspuserName); <br>
- 						&nbsp&nbsp&nbsp&nbsp&nbsp window.speechSynthesis.speak(msg2); <br>
-						&nbsp&nbsp&nbsp&nbsp&nbsp localStorage.setItem('userName', userName);<br>
-						&nbsp&nbsp&nbsp&nbsp&nbsp answer = "I will remember you as " + userName;<br>
-						&nbsp&nbsp&nbsp} <br>
-						&nbsp&nbsp&nbspelse if (userName == null) {<br>
-						&nbsp&nbsp&nbsp&nbsp&nbsp answer = "You didn't type your name";<br>
-						&nbsp&nbsp&nbsp}<br>
-					}<br>
-				</code>
+	if (question.match(".*\\bmy name is\\b.*")) {
+		//if what the user types matches the string 'my name is' then:
+		var userName = question.substring(11);
+		//save the name by extracting the substring after the 11th character
+		if (userName.match(/[0-9]/i)) {
+			//if the user typed only numbers or included a number in their name then:
+			var msg1 = new SpeechSynthesisUtterance('Please type your name in letters only');
+ 			window.speechSynthesis.speak(msg1);
+ 			answer = "Please type your name in letters only";
+		}
+		else if ((userName != null) && (userName.match(/[a-z]/i))) {
+			// if the user typed a name and it is in letters then:
+			var msg2 = new SpeechSynthesisUtterance('I will remember your name as ' + userName); 
+ 			window.speechSynthesis.speak(msg2); 
+			localStorage.setItem('userName', userName);
+			answer = "I will remember you as " + userName;
+		} 
+		else if (userName == null) {
+			answer = "You didn't type your name";
+		}
+	}
+				</code></pre>
 				<br><br>
-			<span style="color: darkgrey">&#8764 March, 2016</span>
+			<p><span style="color: darkgrey">&#8764 March, 2016</span></p>
+			<br><br>
 			</p>
 			</center>
 		</div>
 
 	</body>
-	<script src="../scripts/yveeteLite.js"></script>
+	<script src="../scripts/yveeteLite.js" defer></script>
 </html>

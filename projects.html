@@ -1,0 +1,241 @@
+<html>
+	<header>
+		<title>George | Projects</title>
+		<link rel="icon" href="images/logo background george.png"/>
+		<meta charset="UTF-8">
+		<style>
+		h2 {
+			font-size: 40px;
+			font-family: Helvetica;
+			font-weight: lighter;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			border: none;
+			background-color: white;
+			position: relative;
+			top: 20px;
+			-webkit-animation: titleMove 3s;
+			animation: titleMove 3s;
+		}
+
+		@-webkit-keyframes titleMove {
+			0% {top: -75px;}
+			100% {top: 20px;}
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		#home {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 25px;
+			position: absolute;
+			top: 50px;
+			left: 5%;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			-webkit-transition: color 2s;
+			transition: color 2s;
+			-webkit-transition: font-size 2s;
+			transition: font-size 2s;
+		}
+		#home:hover {
+			color: purple;
+			font-size: 30px;
+		}
+		p {
+			text-align: left;
+			text-indent: 25px;
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 20px;
+			width: 700px;
+			height: 900px;
+			position: relative;
+			top: 140px;
+			opacity: 1;
+			color: ;
+			-webkit-animation: opacity 4s;
+			animation: opacity 4s;
+		}
+		#sortBy {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 18px;
+		}
+		#recent { cursor: pointer; }
+		#best { cursor: pointer; }
+		.proj {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 27px;
+			text-decoration: none;
+			color: black;
+			-webkit-transition: color 2s;
+			-webkit-transition: opacity 0.5s;
+			opacity: 1;
+		}
+		.proj:hover {
+			color: #92005E;
+		}
+		@-webkit-keyframes opacity {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		@-keyframes opacity {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		a:not(.proj,.tags) {
+			color: #92005E;
+			cursor: pointer;
+		}
+		.tags {
+			color: black;
+			text-decoration: none;
+			width: 300px;
+			border-radius: 3px;
+			box-shadow: 2px 2px 2px darkgrey;
+			font-family: courier;
+			text-align: center;
+			color: black;
+			font-size: 15px;
+			opacity: 0.8;
+			float: right;
+		}
+		#programming {
+			width: 100px;
+			padding: 2px 2px;
+			background-color: #e6d200;
+			margin: 0px 4px 4px 0px;
+		}
+		#document {
+			width: 90px;
+			padding: 2px 2px;
+			background-color: #b32d00;
+			margin: 0px 4px 4px 0px;
+		}
+		#library {
+			width: 90px;
+			padding: 2px 2px;
+			background-color: #47d147;
+			margin: 0px 4px 4px 0px;
+		}
+		#content {
+			width: 600px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 200px;
+			margin: auto;
+			float: left;
+		}
+		#date {
+			color: darkgrey;
+		}
+		@-webkit-keyframes appearText {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		@media only screen and (max-device-width: 600px) and (orientation: portrait) {
+			p { font-size: 25px;}
+		}
+		</style>
+	</header>
+	<body>
+	<center><h2>Projects</h2></center>
+	<a id="home" href="index.html">Home</a>
+	<center>
+	<br><br>
+	<div id="sortBy">Sort by: <a id="recent">Most Recent</a>, <a id="best">Best</a></div>
+	<br><br><br><br>
+	</center>
+	<div id='content'>
+		<a class='proj' href="" id="first"></a>
+		<br><br><br><br><br>
+		<a class='proj' href="" id="second"></a>
+		<br><br><br><br><br>
+		<a class='proj' href="" id="third"></a>
+		<br><br><br><br><br>
+		<a class='proj' href="" id="fourth"></a>
+		<br><br><br><br><br>
+		<a class='proj' href="" id="fifth"></a>
+		<br><br><br><br><br>
+	</div>
+	
+</body>	
+<script>
+var x = "local storage variable";
+localStorage.setItem(x, 'x');
+// make tags for each for the lols
+// change george to home
+	function vanish() {
+		first.style.opacity = "0";
+		setTimeout(function() {first.style.opacity = '1';}, 600);
+		second.style.opacity = "0";
+		setTimeout(function() {second.style.opacity = '1';}, 600);
+		third.style.opacity = "0";
+		setTimeout(function() {third.style.opacity = '1';}, 600);
+		fourth.style.opacity = "0";
+		setTimeout(function() {fourth.style.opacity = '1';}, 600);
+		fifth.style.opacity = "0";
+		setTimeout(function() {fifth.style.opacity = '1';}, 600);
+	}
+	//tags
+	function tagProg() {
+		return "<a class='tags' id='programming' href='tags.html'>Programming</a>";
+	}
+	function tagDoc() {
+		return "<a class='tags' id='document' href='tags.html'>Document</a>";
+	}
+	function tagLib() {
+		return "<a class='tags' id='library' href='tags.html'>Library</a>"
+	}
+	function load() {
+		//by default projects will be sorted by recent
+		recent.style.color = "grey";
+		best.style.color = "#92005E";
+		vanish();
+		setTimeout(function() {
+			first.innerHTML = "EasyRegex <span id='date'>(June 2017)<span>" + tagProg() + tagLib();
+			second.innerHTML = "Watch Space <span id='date'>(February 2017)<span>" + tagProg();
+			third.innerHTML = "Bash Profile <span id='date'>(August 2016)<span>" + tagProg();
+			fourth.innerHTML = "Afrodita 1.0 <span id='date'>(May 2016)<span>" + tagDoc();
+			fifth.innerHTML = "Yveete <span id='date'>(March 2016)<span>" + tagProg();
+
+			first.href = "projects/easy-regex.html";
+			second.href = "projects/watch-space.html";
+			third.href = "projects/bash.html";
+			fourth.href = "projects/afrodita.html";
+			fifth.href = "projects/yveete.html";
+		}, 600);
+	}
+	recent.onclick = function() {
+		recent.style.color = "grey";
+		load();
+	}
+	best.onclick = function() {
+		recent.style.color = "#92005E";
+		best.style.color = "grey";
+		vanish();
+		setTimeout(function() {
+			first.innerHTML = "EasyRegex" + tagProg() + tagLib();
+			second.innerHTML = "Yveete" + tagProg();
+			third.innerHTML = "Afrodita 1.0" + tagDoc();
+			fourth.innerHTML = "Watch Space" + tagProg();
+			fifth.innerHTML = "Bash Profile" + tagProg();
+
+			first.href = "projects/easy-regex.html";
+			second.href ="projects/yveete.html";
+			third.href = "projects/afrodita.html";
+			fourth.href = "projects/watch-space.html";
+			fifth.href = "projects/bash.html";			
+		}, 600);
+	}
+	load();
+</script>
+</html>

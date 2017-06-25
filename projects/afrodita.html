@@ -48,7 +48,7 @@
 		color: purple;
 		font-size: 30px;
 	}
-	#bash {
+	#other {
 		height: 50px;
 		font-family: Helvetica;
 		font-weight: lighter;
@@ -65,7 +65,7 @@
 		-webkit-transition: font-size 2s;
 		transition: font-size 2s;
 		}
-	#bash:hover {
+	#other:hover {
 		color: #92005E;
 		font-size: 30px;
 	}
@@ -90,7 +90,7 @@
 	a {
 		color: #92005E;
 	}
-	@media screen and (max-device-width: 600px) { 
+	@media only screen and (max-device-width: 950px) and (orientation: portrait) { 
 		p {font-size: 25px;} 
 	}
 	</style>
@@ -98,7 +98,7 @@
 <body>
 	<center><h2>Afrodita 1.0</h2></center>
 	<a id="yveete" href="yveete.html">Yveete</a>
-	<a id="bash" href="bash.html">Bash Profile</a>
+	<a id="other" href="../projects.html">Other</a>
 	<center>
 		<p>Afrodita 1.0 is a space settlement that was made for the Nasa Ames contest. It is supposed to be located in the Langrange 4 (Earth-Moon system) and it's consisted of 3 toruses which provide pseudo gravity to accommodate &#8764 30 000 inhabitants.
 		<br><br><em>Afrodita 1.0 was a project in the NASA Ames Space Settlement Contest 2016 that received the 3rd place. The 90-paged project was written by Maria Disli, Andrei Lu, Filip Gkogkos, George Valtas and Nicolas Mantescu</em><br><br>
@@ -108,17 +108,4 @@
 		</p>
 	</center>
 </body>
-<script>
-var button = document.getElementById('btn');
-var pdf = document.getElementById('pdf');
-button.onclick = function() {
-	pdf.style.visibility = "visible";
-	button.innerHTML = "Hide PDF File";
-}
-button.ondblclick = function() {
-	pdf.style.visibility = "hidden";
-	document.getElementById('btn').innerHTML = "Show PDF File";
-}
-
-</script>
 </html>

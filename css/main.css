@@ -37,15 +37,7 @@
 			font-weight: lighter;
 			position: relative;
 			top: -18px;
-		}
-		.surname {
-			font-size: 60px;
-			font-family: fertigo-script, cursive;
-			font-style: normal;
-			font-weight: lighter;
-			margin-left: 190px;
-			margin-top: -77.5px;
-		}
+		}ß
 		.info {
 			color: grey;
 		}
@@ -150,7 +142,7 @@
 			0% {opacity: 0;}
 			100% {opacity: 0.6;}
 		}
-		#fiverr:hover, #gmail:hover, #github:hover {
+		#gmail:hover, #github:hover {
 			-webkit-transform: scale(1.2);
 			opacity: 1;
 		}
@@ -206,12 +198,10 @@
 			-webkit-transition: font-size 0.4s;
 			transition: font-size 0.4s;
 		}
-
 		.dropbtn:hover {
 		    font-size: 45px;
 			color: #92005E;
 		}
-
 		.dropdown {
 		    position: absolute;
 		    display: inline-block;
@@ -443,6 +433,17 @@
 			opacity: 0;
 			-webkit-transition: opacity 1s;
 		}
+		#loading {
+			position: absolute;
+			top: 140%;
+			left: 40%;
+			visibility: hidden;
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 25px;
+			color: grey;
+			z-index: 40;
+		}
 		/* mobile size */
 		@media screen and (max-device-width: 600px) and (orientation: portrait) {
 			html { zoom: 1.5;}
@@ -456,6 +457,19 @@
 			#img1,#img2,#img3,#img21,#img22 { display: none;}
 			#fiverr, #gmail, #github { transform: scale(1.4);}
 			#icons { top: 30px; }
+		}
+		@media screen and (max-device-width: 600px) and (orientation: landscape) {
+			html { zoom: 1.5;}
+			.info { font-size: 22px; position: relative;text-indent: 7px;}
+			ul li a { visibility: hidden;}
+			.dropdown-content { min-width: 120%; text-indent: 20px; font-size: 30px;}
+			.dropdown-content2 { width: 1000px; text-indent: 20px; font-size: 30px;}
+			.dropbtn { font-size: 60px;}
+			.dropbtn2 { position: relative; left: -100px; font-size: 60px;}
+			#about { font-size: 60px;}
+			#fiverr, #gmail, #github { transform: scale(1.4);}
+			#icons { top: 30px; }
+			#img1,#img2,#img3,#img21,#img22 { left:0; right:0; max-width: 120%;}
 		}
 		@media screen and (max-device-width: 800px) and (orientation: landscape) {
 			.dropdown-content, .dropdown-content2 { 

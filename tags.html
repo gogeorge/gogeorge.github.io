@@ -1,0 +1,189 @@
+<html>
+	<head>
+		<title>George | Tags</title>
+		<link rel="icon" href="images/logo background george.png"/>
+		<meta charset="UTF-8">
+		<link rel='stylesheet' href='css/awesomplete.css'> 
+		<style>
+		h2 {
+			font-size: 40px;
+			font-family: Helvetica;
+			font-weight: lighter;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			border: none;
+			background-color: white;
+			position: relative;
+			top: 20px;
+			-webkit-animation: titleMove 3s;
+			animation: titleMove 3s;
+		}
+
+		@-webkit-keyframes titleMove {
+			0% {top: -75px;}
+			100% {top: 20px;}
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		#home {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 25px;
+			position: absolute;
+			top: 50px;
+			left: 5%;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			-webkit-transition: color 2s;
+			transition: color 2s;
+			-webkit-transition: font-size 2s;
+			transition: font-size 2s;
+		}
+		#home:hover {
+			color: purple;
+			font-size: 30px;
+		}
+		p {
+			text-align: left;
+			text-indent: 25px;
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 20px;
+			width: 700px;
+			height: 900px;
+			position: relative;
+			top: 140px;
+			opacity: 1;
+			color: ;
+			-webkit-animation: opacity 4s;
+			animation: opacity 4s;
+		}
+		.proj {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 27px;
+			text-decoration: none;
+			color: black;
+			-webkit-transition: color 2s;
+			-webkit-transition: opacity 0.5s;
+			opacity: 1;
+		}
+		.proj:hover {
+			color: #92005E;
+		}
+		@-webkit-keyframes opacity {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		@-keyframes opacity {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		a:not(.proj,.tags) {
+			color: #92005E;
+			cursor: pointer;
+		}
+		.tags {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 20px;
+			text-align: left;
+			position: relative;
+			top: -800px;
+			visibility: hidden;
+		}
+		#programming {
+			width: 100px;
+			padding: 2px 2px;
+			background-color: #e6d200;
+			margin: 0px 4px 4px 0px;
+		}
+		#document {
+			width: 90px;
+			padding: 2px 2px;
+			background-color: #b32d00;
+			margin: 0px 4px 4px 0px;
+		}
+		#library {
+			width: 90px;
+			padding: 2px 2px;
+			background-color: #47d147;
+			margin: 0px 4px 4px 0px;
+		}
+		#content {
+			width: 600px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 200px;
+			margin: auto;
+			float: left;
+		}
+		#date {
+			color: darkgrey;
+		}
+		#search {
+			width: 300px;
+			height: 25px;
+			border-radius: 4px;
+			border-color: #92005E;
+/*			position: relative;
+			top: -780px;
+			left: 40px;*/
+		}
+		.prog {
+			display: none;
+		}
+		#doc {
+			visibility: hidden;
+		}
+		#lib {
+			visibility: hidden;
+		}
+		div {
+			position: relative;
+			top: -600px;
+		}
+		@-webkit-keyframes appearText {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		@media only screen and (max-device-width: 600px) and (orientation: portrait) {
+			p { font-size: 25px;}
+		}
+		</style>
+	</head>
+	<body>
+	<center><h2>Tags</h2></center>
+	<a id="home" href="index.html">Home</a>
+	<center>
+	<p>This page is under construction</p>
+	</pbr><br>
+	<p>Search for a tag:</p>
+	<input class="awesomplete" id='search' data-list="library, programming, document" />
+	<br><br>
+	<!-- programming tag -->
+	<a  class='tags' class='prog'>EasyRegex</a><br>
+	<a  class='tags' class='prog'>Watch Space</a><br>
+	<a  class='tags' class='prog'>Bash Profile</a><br>
+	<a  class='tags' class='prog'>Yveete</a><br>
+	<!-- documents -->
+	<a class='tags' id='doc'>Afrodita 1.0</a>
+	<!-- library -->
+	<a class='tags' id='lib'>EasyRegex</a>
+</body>
+<script src='scripts/awesomplete.js' async></script>
+<script>
+	setInterval(function() {
+		if (search.value == "programming") {
+			console.log('programming');
+			document.getElementsByClassName('prog').style.display = "block";	
+		}	
+}, 1500);
+</script>
+</html>

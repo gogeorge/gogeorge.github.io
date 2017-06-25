@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>George | EasyRegex</title>
+		<link rel="icon" href="../images/logo background george.png">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../css/github.css">
+		<script src='../scripts/highlight.pack.js'></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<style>
+		#watchspace {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 25px;
+			position: absolute;
+			top: 50px;
+			right: 5%;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			-webkit-transition: color 2s;
+			transition: color 2s;
+			-webkit-transition: font-size 2s;
+			transition: font-size 2s;
+		}
+		#watchspace:hover {
+			color: #92005E;
+			font-size: 30px;
+		}
+		#home {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 25px;
+			position: absolute;
+			top: 50px;
+			left: 5%;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			-webkit-transition: color 2s;
+			transition: color 2s;
+			-webkit-transition: font-size 2s;
+			transition: font-size 2s;
+		}
+		#home:hover {
+			color: #92005E;
+			font-size: 30px;
+		}
+		#yveete {
+			font-size: 40px;
+			font-family: Helvetica;
+			font-weight: lighter;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			border: none;
+			background-color: white;
+			cursor: pointer;
+			position: relative;
+			top: 0px;
+			-webkit-animation: titleMove 3s;
+			animation: titleMove 3s;
+		}
+
+		@-webkit-keyframes titleMove {
+			0% {top: -75px;}
+			100% {top: 0px;}
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		#main p {
+			width: 750px;
+			font-size: 20px;
+			font-family: Helvetica;
+			font-weight: lighter;
+			opacity: 1;
+			text-align: left;
+			text-indent: 25px;
+			line-height: 26px;
+			-webkit-animation: appearText 2s;
+			animation: appearText 2s;
+		}
+		@-webkit-keyframes appearText {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		code:not('.javascript') {
+			font-size: 18px;
+			text-indent: 10px;
+			text-align: left;
+			-webkit-animation: appearText 2s;
+			animation: appearText 2s;
+		}
+		.javascript {
+			text-align: left;
+			font-size: 13px;
+		}
+		@-webkit-keyframes appearText {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		pre {
+			width: 850px;
+		}
+		a {
+			color: #92005E;
+		}
+		#pseudocode {
+			width: 800px;
+			font-family: Courier;
+			text-align: left;
+		}	
+		#spanMatch1 { -webkit-transition: opacity 1s;}
+		#regexSoda { -webkit-transition: opacity 1s; color: #b32d00;}
+		#regexTwo { -webkit-transition: opacity 1s; color: #b32d00;}
+		#hasStringParam { visibility: hidden; color: #b32d00; }
+		#hasStringParam2 { visibility: hidden; color: #b32d00; }
+		#brackets { color: black; }
+		#comment { color: darkgrey; text-indent: 20px; } 
+		@media only screen and (max-device-width: 950px) and (orientation: portrait) {
+			
+		}
+		</style>
+	</head>
+	<body>
+		<center>
+			<br><br><br>
+			<center><button id="yveete">EasyRegex</button></center>
+			<a id="home" href="../index.html">Home</a>
+			<a id="watchspace" href="watch-space.html">Watch Space</a>
+			<br><br><br><br>
+		</center>
+		<div id="main">
+			<center>
+			<div id="pseudocode"></div>
+			<br><br><br><br>
+			<p>
+			EasyRegex is a Javascipt library that makes it easier to use regular expressions.
+			<br><br>
+			Regular Expressions are complex sequences of symbols and characters that are used to find and search somethign in a string. Regular expressions can check if a string contains numbers or a specific word/phrase etc.
+			<br><br>
+			The library is consisted of several functions, each with appropriate and easy to remember names, that <em>return</em> their regular expression. The functions can be combined thus making it easier for the user to achieve what they want.
+			<br><br>
+			Here is an example:
+			<br><br>
+			Let's say you want to check if a string contains gmail or yahoo email addresses but not any greek addresses which end in '.gr'. In other words, you want to check if the string contains '@gmail' OR '@yahoo' but NOT '.gr'. Let the string be <code>var a</code>.
+			<br><br>
+			So without using any libraries this is a possible way to check the string:
+			<br>
+			<pre><code class='javascript'>
+	var a = "John has this email: example@gmail.com and Doe has this one example@yahoo.com etc...";
+
+	if (a.match('.*\b@gmail\b.*') || (a.match('.*\b@yahoo\b.*') && a.match('.*^(?!.*.gr).*$'))) {
+  		console.log("string contains either '@gmail' or '@yahoo' and not '.gr'");
+	} else {
+  		console.log('did not match');
+	}
+	/*
+	The string contains everything that is needed and it doesn't contain
+	a greek email therefore the string matches the regular expressions
+	*/
+	</code></pre>
+			<p> The regular expressions on the above code block look confusing and complex when you can use this library to achieve something less confusing and more 'readable':</p>
+			<br>
+			<pre><code>
+	var a = "John has this email: example@gmail.com and Doe has this one example@yahoo.com etc...";
+
+	if (a.match(hasString('@gmail') + or() + hasString('@yahoo') + notString('.gr'))) {
+  		console.log("string contains either '@gmail' or '@yahoo' and not '.gr'");
+	} else {
+  		console.log('did not match');
+	}
+			</code></pre>
+	<p>In this example, these functions are used instead of regular expressions to achieve the same result.Each function returns a specfic regular expression. For example <code>hasString('@gmail')</code> will check if <code>var a</code> contains '@gmail' and <code>notString('.gr')</code> will check if <code>var a</code> does <em>not</em> contain '.gr'. 
+	<br><br>
+	For more information visit the <a href="https://github.com/gogeorge/EasyRegex" target="_blank">github repository</a> where it also has a table of the rest functions that can be used.</p>
+			<br><br>
+			<p><span style="color: darkgrey">&#8764 June, 2017</span></p>
+			<br><br>
+			</p>
+			</center>
+		</div>
+
+	</body>
+	<script src="../scripts/regexAnimation.js" defer></script>
+</html>

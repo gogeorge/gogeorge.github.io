@@ -5,7 +5,10 @@
    				This script has been developed by George Valtas
 
    				*/
+   				window.onload = function() {
+   				input.select();
 
+   				}
    				//takes input from <input>	
 				function takeInput(e) {
 
