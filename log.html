@@ -1,0 +1,139 @@
+<html>
+	<head>
+		<title>George | Log</title>
+		<link rel="icon" href="images/logo background george.png"/>
+		<meta charset="UTF-8">
+		<link rel='stylesheet' href='css/awesomplete.css'> 
+		<style>
+		h2 {
+			font-size: 40px;
+			font-family: Helvetica;
+			font-weight: lighter;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			border: none;
+			background-color: white;
+			position: relative;
+			top: 20px;
+			-webkit-animation: titleMove 3s;
+			animation: titleMove 3s;
+		}
+
+		@-webkit-keyframes titleMove {
+			0% {top: -75px;}
+			100% {top: 20px;}
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		#home {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 25px;
+			position: absolute;
+			top: 50px;
+			left: 5%;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			-webkit-transition: color 2s;
+			transition: color 2s;
+			-webkit-transition: font-size 2s;
+			transition: font-size 2s;
+		}
+		#home:hover {
+			color: purple;
+			font-size: 30px;
+		}
+		p {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 20px;
+			opacity: 1;
+			-webkit-animation: opacity 4s;
+			animation: opacity 4s;
+		}
+		#event {
+			text-decoration: none;
+			color: #92005E;
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 25px;
+		}
+		#date {
+			font-size: 25px;
+			color: darkgrey;
+		}
+		span {
+			font-family: Helvetica;
+			font-size: 35px;
+		}
+		@media only screen and (max-device-width: 600px) and (orientation: portrait) {
+			p { font-size: 25px;}
+		}
+		</style>
+	</head>
+	<body>
+		<center><h2>Log</h2></center>
+		<a id="home" href="index.html">Home</a>
+		<center>
+			<br><br><br>
+			<p style='color: darkgrey;'>Chronological order of stuff I created.
+			<br><br>
+			1 dot = 1 month</p>
+			<br><br><br><br><br><br>
+			<div id='content'>
+				<div id='update'></div>
+				<br>
+				<a href='projects/easy-regex.html' id='event' class='20176'>EasyRegex <span id='date'>(June 2017)</span></a>
+				<br><span>.</span><br>
+				<br><span>.</span><br>
+				<br><span>.</span><br>
+				<br>
+				<a href='projects/watch-space.html' id='event'>Watch Space <span id='date'>(February 2017)</span></a>
+				<br><span>.</span><br>
+				<br><span>.</span><br>
+				<br><span>.</span><br>
+				<br><span>.</span><br>
+				<br><span>.</span><br>
+				<br>
+				<a href='projects/bash.html' id='event'>Bash Profile <span id='date'>(August 2016)</span></a>
+				<br><span>.</span><br>
+				<br><span>.</span><br>
+				<br>
+				<a href='projects/afrodita.html' id='event'>Afrodita 1.0 <span id='date'>(May 2016)</span><br> <p style='color: darkgrey;'>with Maria Disli, Andrei Lu, Filip Gkogkos and Nicolas Mantescu</p></a>
+				<br><span>.</span><br>
+				<br>
+				<a href='projects/yveete.html' id='event'>Yveete <span id='date'>(March 2016)</span></a>
+				<br><br>
+			</div>
+		</center>	
+	</body>
+	<script>
+		var d = new Date();
+		//last event needs to be changed when there is a new project (year + month)
+		var lastEvent = document.getElementsByTagName("A")[1].getAttribute('class');
+		var now = d.getFullYear() + "" + (+d.getMonth() + +"1");
+		//this is my second loop i ever did in my life
+		if (now > lastEvent) {
+			if (now.substring(0, 4) == lastEvent.substring(0, 4)) {
+				var n = now - lastEvent;
+				if (n != 0) {
+					for (i = 0; n > i; i++) {
+						update.innerHTML += "<br><span>.</span><br>";
+					}	
+				}
+			} else {
+				var y = now.substring(0, 4) - lastEvent.substring(0, 4);
+				y = y * 12;
+				var n = now.substring(4);
+				n = +y + +n;
+				for (i = 0; n > i; i++) {
+					update.innerHTML += "<br><span>.</span><br>";
+				}
+			}
+		}
+	</script>
+</html>

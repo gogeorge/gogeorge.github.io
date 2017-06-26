@@ -39,7 +39,9 @@ function animation() {
 	}, 6750);	
 }
 animation();
-setInterval(function() { animation() }, 10000);
+setInterval(function() { 
+	animation();
+}, 10000);
 
 
 
