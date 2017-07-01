@@ -47,7 +47,7 @@
     },
     {
       "name" : "Watch Space",
-      "descriptions" : "A website that fetches the location of ISS and the astronauts in space",
+      "description" : "A website that fetches the location of ISS and the astronauts in space",
       "languages" : "Javascript, Jquery",
       "url" : "https://gogeorge.github.io/projects/watch-space",
       "date" : "20172"
