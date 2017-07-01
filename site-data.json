@@ -1,0 +1,63 @@
+{
+  "programming" : {
+    "EasyRegex" : {
+      "description" : "A Javascript library consisted of functions that make it easier to construct regular expressions",
+      "languages" : "Javascript",
+      "url" : "https://gogeorge.github.io/projects/easy-regex",
+      "date" : "20176"
+    },
+    "Watch-Space" : {
+      "descriptions" : "A website that fetches the location of ISS and the astronauts in space",
+      "languages" : "Javascript, Jquery",
+      "url" : "https://gogeorge.github.io/projects/watch-space",
+      "date" : "20172"
+    },
+    "Yveete": {
+        "description" : "Personal Assistant made from hundreds of if/else conditions",
+        "languages" : "Javascript",
+        "url" : "https://gogeorge.github.io/projects/yveete",
+        "date" : "20163"
+    },
+    "Bash Profile" : {
+      "description" : "The bash profile I currently use",
+      "languages" : "Shell",
+      "url" : "https://gogeorge.github.io/projects/bash",
+      "date" : "20168"
+    }
+  },
+  "document" : {
+    "Afrodita": {
+      "description" : "A spaceship located in the 4th Lagrange point with the ability to accomodate passengers and explore nearby asteroids",
+      "url" : "https://gogeorge.github.io/projects/afrodita",
+      "date" : "20165"
+      }
+  },
+  "javascript" : {
+    "EasyRegex" : {
+      "description" : "A Javascript library consisted of functions that make it easier to construct regular expressions",
+      "languages" : "Javascript",
+      "url" : "https://gogeorge.github.io/projects/easy-regex",
+      "date" : "20176"
+    },
+    "Watch-Space" : {
+      "descriptions" : "A website that fetches the location of ISS and the astronauts in space",
+      "languages" : "Javascript, Jquery",
+      "url" : "https://gogeorge.github.io/projects/watch-space",
+      "date" : "20172"
+    },
+    "Yveete": {
+        "description" : "Personal Assistant made from hundreds of if/else conditions",
+        "languages" : "Javascript",
+        "url" : "https://gogeorge.github.io/projects/yveete",
+        "date" : "20163"
+    }
+  },
+  "shell" : {
+    "Bash Profile" : {
+      "description" : "The bash profile I currently use",
+      "languages" : "Shell",
+      "url" : "https://gogeorge.github.io/projects/bash",
+      "date" : "20168"
+    }
+  }
+}
