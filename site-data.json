@@ -1,24 +1,28 @@
 {
   "programming" : [
     {
+      "name" : "EasyRegex",
       "description" : "A Javascript library consisted of functions that make it easier to construct regular expressions",
       "languages" : "Javascript",
       "url" : "https://gogeorge.github.io/projects/easy-regex",
       "date" : "20176"
     },
-    {
+    { 
+      "name" : "Watch Space",
       "descriptions" : "A website that fetches the location of ISS and the astronauts in space",
       "languages" : "Javascript, Jquery",
       "url" : "https://gogeorge.github.io/projects/watch-space",
       "date" : "20172"
     },
     {
-        "description" : "Personal Assistant made from hundreds of if/else conditions",
-        "languages" : "Javascript",
-        "url" : "https://gogeorge.github.io/projects/yveete",
-        "date" : "20163"
+      "name" : "Yveete",
+      "description" : "Personal Assistant made from hundreds of if/else conditions",
+      "languages" : "Javascript",
+      "url" : "https://gogeorge.github.io/projects/yveete",
+      "date" : "20163"
     },
-    {
+    { 
+      "name" : "Bash Profile",
       "description" : "The bash profile I currently use",
       "languages" : "Shell",
       "url" : "https://gogeorge.github.io/projects/bash",
@@ -27,6 +31,7 @@
   ],
   "document" : [
     {
+      "name" : "Afrodita 1.0",
       "description" : "A spaceship located in the 4th Lagrange point with the ability to accomodate passengers and explore nearby asteroids",
       "url" : "https://gogeorge.github.io/projects/afrodita",
       "date" : "20165"
@@ -34,26 +39,30 @@
   ],
   "javascript" : [
     {
+      "name" : "EasyRegex",
       "description" : "A Javascript library consisted of functions that make it easier to construct regular expressions",
       "languages" : "Javascript",
       "url" : "https://gogeorge.github.io/projects/easy-regex",
       "date" : "20176"
     },
     {
+      "name" : "Watch Space",
       "descriptions" : "A website that fetches the location of ISS and the astronauts in space",
       "languages" : "Javascript, Jquery",
       "url" : "https://gogeorge.github.io/projects/watch-space",
       "date" : "20172"
     },
     {
-        "description" : "Personal Assistant made from hundreds of if/else conditions",
-        "languages" : "Javascript",
-        "url" : "https://gogeorge.github.io/projects/yveete",
-        "date" : "20163"
+      "name" : "Yveete",
+      "description" : "Personal Assistant made from hundreds of if/else conditions",
+      "languages" : "Javascript",
+      "url" : "https://gogeorge.github.io/projects/yveete",
+      "date" : "20163"
     }
   ],
   "shell" : [
-    {
+    { 
+      "name" : "Bash Profile",
       "description" : "The bash profile I currently use",
       "languages" : "Shell",
       "url" : "https://gogeorge.github.io/projects/bash",
