@@ -1,12 +1,12 @@
 function animation() {
-	var codeRegex = "<b>var</b> string = 'two sodas and two burgers';<br><br><b>if</b> (string.match(<span id='regexSoda'>'.*\\bsodas\\b.*'</span>) <span id='plus1'></span> <span id='or'>||</span> <span id='plus2'></span> string.match(<span id='regexTwo'>'/two+/g'</span>)) {<br><br><span id='comment'>&nbsp&nbsp&nbsp/* ...code after string matches the regex... */</span><br><br> } <b>else</b> { <br><br><span id='comment'>&nbsp&nbsp/* string did not match */</span><br><br> }";
+	var codeRegex = "<b>var</b> string = 'An orange juice, an apple juice and a burger';<br><br><b>if</b> (string.match(<span id='regexSoda'>'.*\\bburger\\b.*'</span>) <span id='plus1'></span> <span id='or'>||</span> <span id='plus2'></span> string.match(<span id='regexTwo'>/juice+/g</span>)) {<br><br><span id='comment'>&nbsp&nbsp&nbsp/* ...code after string matches the regex... */</span><br><br> } <b>else</b> { <br><br><span id='comment'>&nbsp&nbsp/* string did not match */</span><br><br> }";
 	pseudocode.innerHTML = codeRegex;
 	//erase regexSoda
 	setTimeout(function() { regexSoda.style.opacity = "0";}, 2000);
 	//place hasString()
 	setTimeout(function() { 
 		regexSoda.style.opacity = "1";
-		regexSoda.innerHTML = "<span style='color:deepskyblue;'>hasString<span id='brackets'>(</span><span id='hasStringParam'>'sodas'</span><span id='brackets'>)</span></span>";
+		regexSoda.innerHTML = "<span style='color:deepskyblue;'>hasString<span id='brackets'>(</span><span id='hasStringParam'>'burger'</span><span id='brackets'>)</span></span>";
 		hasStringParam.style.opacity = "0";
 	}, 2500);
 	//regexSoda changes to a string
@@ -30,7 +30,7 @@ function animation() {
 	//place atLeastOne()
 	setTimeout(function() { 
 		regexTwo.style.opacity = "1";
-		regexTwo.innerHTML = "<span style='color:deepskyblue;'>atLeastOne<span id='brackets'>(</span><span id='hasStringParam2'>'two'</span><span id='brackets'>)</span></span>";
+		regexTwo.innerHTML = "<span style='color:deepskyblue;'>atLeastOne<span id='brackets'>(</span><span id='hasStringParam2'>'juice'</span><span id='brackets'>)</span></span>";
 		hasStringParam2.style.opacity = "0";
 	}, 5750);
 	setTimeout(function() { 

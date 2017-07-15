@@ -3,7 +3,6 @@
 		<title>George | Tags</title>
 		<link rel="icon" href="images/logo background george.png"/>
 		<meta charset="UTF-8">
-		<link rel='stylesheet' href='css/awesomplete.css'> 
 		<style>
 		h2 {
 			font-size: 40px;
@@ -54,26 +53,12 @@
 			font-weight: lighter;
 			font-size: 20px;
 			width: 700px;
-			height: 900px;
 			position: relative;
 			top: 140px;
 			opacity: 1;
 			color: ;
 			-webkit-animation: opacity 4s;
 			animation: opacity 4s;
-		}
-		.proj {
-			font-family: Helvetica;
-			font-weight: lighter;
-			font-size: 27px;
-			text-decoration: none;
-			color: black;
-			-webkit-transition: color 2s;
-			-webkit-transition: opacity 0.5s;
-			opacity: 1;
-		}
-		.proj:hover {
-			color: #92005E;
 		}
 		@-webkit-keyframes opacity {
 			0% {opacity: 0;}
@@ -83,71 +68,78 @@
 			0% {opacity: 0;}
 			100% {opacity: 1;}
 		}
-		a:not(.proj,.tags) {
+		a:not(.tags) {
 			color: #92005E;
 			cursor: pointer;
 		}
+		#tags {
+			width: 800px;
+		}
 		.tags {
-			font-family: Helvetica;
-			font-weight: lighter;
-			font-size: 20px;
-			text-align: left;
 			position: relative;
-			top: -800px;
-			visibility: hidden;
+			top: 120px;
+			display: inline-block;
+			color: black;
+			text-decoration: none;
+			border-radius: 3px;
+			font-family: courier;
+			text-align: center;
+			color: black;
+			font-size: 15px;
+			opacity: 0.8;
+			cursor: pointer;
 		}
 		#programming {
 			width: 100px;
+			height: 17px;
 			padding: 2px 2px;
 			background-color: #e6d200;
 			margin: 0px 4px 4px 0px;
+			box-shadow: 2px 2px 2px darkgrey;
 		}
-		#document {
+		#documents {
 			width: 90px;
 			padding: 2px 2px;
 			background-color: #b32d00;
 			margin: 0px 4px 4px 0px;
+			box-shadow: 2px 2px 2px darkgrey;
 		}
-		#library {
-			width: 90px;
+		#javascript {
+			width: 100px;
 			padding: 2px 2px;
 			background-color: #47d147;
 			margin: 0px 4px 4px 0px;
+			box-shadow: 2px 2px 2px darkgrey;
 		}
-		#content {
-			width: 600px;
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			top: 200px;
-			margin: auto;
-			float: left;
+		#shell {
+			width: 70px;
+			padding: 2px 2px;
+			background-color: darkgrey;
+			margin: 0px 4px 4px 0px;
+			box-shadow: 2px 2px 2px darkgrey;
 		}
 		#date {
 			color: darkgrey;
 		}
-		#search {
-			width: 300px;
-			height: 25px;
-			border-radius: 4px;
-			border-color: #92005E;
-/*			position: relative;
-			top: -780px;
-			left: 40px;*/
-		}
-		.prog {
-			display: none;
-		}
-		#doc {
-			visibility: hidden;
-		}
-		#lib {
-			visibility: hidden;
-		}
-		div {
+		#results {
+			text-align: center;
 			position: relative;
-			top: -600px;
+			top: 150px;
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 20px;
+		}
+		#results a {
+			text-decoration: none;
+			color: black;
+		}
+		#results a:hover:not(#desc) {
+			color: #92005E;
+		}
+		#desc {
+			width: 100px;
+			color: darkgrey !important;
+			font-size: 15px;
 		}
 		@-webkit-keyframes appearText {
 			0% {opacity: 0;}
@@ -162,28 +154,103 @@
 	<center><h2>Tags</h2></center>
 	<a id="home" href="index.html">Home</a>
 	<center>
-	<p>This page is under construction</p>
-	</pbr><br>
-	<p>Search for a tag:</p>
-	<input class="awesomplete" id='search' data-list="library, programming, document" />
-	<br><br>
-	<!-- programming tag -->
-	<a  class='tags' class='prog'>EasyRegex</a><br>
-	<a  class='tags' class='prog'>Watch Space</a><br>
-	<a  class='tags' class='prog'>Bash Profile</a><br>
-	<a  class='tags' class='prog'>Yveete</a><br>
-	<!-- documents -->
-	<a class='tags' id='doc'>Afrodita 1.0</a>
-	<!-- library -->
-	<a class='tags' id='lib'>EasyRegex</a>
+		<p>This page is under construction</p>
+		</br><br>
+		<p>Choose a tag:</p>
+		<div id='tags'> 
+			<br><br>
+			<div class='tags' id='programming'>Programming</div>
+			<div class='tags' id='documents'>Document</div>
+			<div class='tags' id='javascript'>Javascript</div>
+			<div class='tags' id='shell'>Shell</div>
+		</div>
+		<br><br>
+		<div id='results'></div>
+	</center>
 </body>
-<script src='scripts/awesomplete.js' async></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
-	setInterval(function() {
-		if (search.value == "programming") {
-			console.log('programming');
-			document.getElementsByClassName('prog').style.display = "block";	
-		}	
-}, 1500);
-</script>
+	$.getJSON("https://gogeorge.github.io/site-data.json", function(data) {
+		programming.onclick = function() {
+			if (results.innerHTML == "") {
+				programming.style.backgroundColor = "#998c00";
+				programming.style.boxShadow = "0px 0px 0px";
+
+				documents.style.backgroundColor = "#b32d00";
+				documents.style.boxShadow = "2px 2px 2px darkgrey";
+				javascript.style.backgroundColor = "#47d147";
+				javascript.style.boxShadow = "2px 2px 2px darkgrey";
+				shell.style.backgroundColor = "darkgrey";
+				shell.style.boxShadow = "2px 2px 2px darkgrey";
+				for (i = 0; i < 4; i++) {	
+					results.innerHTML += "<a href=" + data.programming[i].url + " target='_blank'>" + data.programming[i].name + "</a><br><a id='desc'>" + data.programming[i].description + "</a><br><br>";
+				}
+			} else {
+				programming.style.backgroundColor = "#e6d200";
+				programming.style.boxShadow = "2px 2px 2px darkgrey";
+				results.innerHTML = "";
+			}
+		}
+		documents.onclick = function() {
+			if (results.innerHTML == "") {
+				documents.style.backgroundColor = "#661a00";
+				documents.style.boxShadow = "0px 0px 0px";
+
+				programming.style.backgroundColor = "#e6d200";
+				programming.style.boxShadow = "2px 2px 2px darkgrey";
+				javascript.style.backgroundColor = "#47d147";
+				javascript.style.boxShadow = "2px 2px 2px darkgrey";
+				shell.style.backgroundColor = "darkgrey";
+				shell.style.boxShadow = "2px 2px 2px darkgrey";
+				for (i = 0; i < 1; i++) {
+					results.innerHTML += "<a href=" + data.document[i].url + " target='_blank'>" + data.document[i].name + "</a><br><a id='desc'>" + data.document[i].description + "</a><br><br>";
+				}
+			} else {
+				documents.style.backgroundColor = "#b32d00";
+				documents.style.boxShadow = "2px 2px 2px darkgrey";
+				results.innerHTML = "";
+			}
+		}
+		javascript.onclick = function() {
+			if (results.innerHTML == "") {
+				javascript.style.backgroundColor = "#29a329";
+				javascript.style.boxShadow = "0px 0px 0px";
+
+				programming.style.backgroundColor = "#e6d200";
+				programming.style.boxShadow = "2px 2px 2px darkgrey";
+				documents.style.backgroundColor = "#b32d00";
+				documents.style.boxShadow = "2px 2px 2px darkgrey";
+				shell.style.backgroundColor = "darkgrey";
+				shell.style.boxShadow = "2px 2px 2px darkgrey";
+				for (i = 0; i < 3; i++) {
+					results.innerHTML += "<a href=" + data.javascript[i].url + " target='_blank'>" + data.javascript[i].name + "</a><br><a id='desc'>" + data.javascript[i].description + "</a><br><br>";
+				}				
+			} else {
+				javascript.style.backgroundColor = "#47d147";
+				javascript.style.boxShadow = "2px 2px 2px darkgrey";
+				results.innerHTML = "";
+			}
+		}
+		shell.onclick = function() {
+			if (results.innerHTML == "") {
+				shell.style.backgroundColor = "grey";
+				shell.style.boxShadow = "0px 0px 0px";
+
+				programming.style.backgroundColor = "#e6d200";
+				programming.style.boxShadow = "2px 2px 2px darkgrey";
+				documents.style.backgroundColor = "#b32d00";
+				documents.style.boxShadow = "2px 2px 2px darkgrey";
+				javascript.style.backgroundColor = "#47d147";
+				javascript.style.boxShadow = "2px 2px 2px darkgrey";
+				for (i = 0; i < 1; i++) {
+					results.innerHTML += "<a href=" + data.shell[i].url + " target='_blank'>" + data.shell[i].name + "</a><br><a id='desc'>" + data.shell[i].description + "</a><br><br>";
+				}
+			} else {
+				shell.style.backgroundColor = "darkgrey";
+				shell.style.boxShadow = "2px 2px 2px darkgrey";
+				results.innerHTML = "";
+			}
+		}
+	});	
+</script> 
 </html>

@@ -46,6 +46,26 @@
 			color: purple;
 			font-size: 30px;
 		}
+		#log {
+			font-family: Helvetica;
+			font-weight: lighter;
+			font-size: 25px;
+			position: absolute;
+			top: 50px;
+			right: 5%;
+			opacity: 1;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			-webkit-transition: color 2s;
+			transition: color 2s;
+			-webkit-transition: font-size 2s;
+			transition: font-size 2s;
+		}
+		#log:hover {
+			color: purple;
+			font-size: 30px;
+		}
 		p {
 			text-align: left;
 			text-indent: 25px;
@@ -118,14 +138,20 @@
 			background-color: #b32d00;
 			margin: 0px 4px 4px 0px;
 		}
-		#library {
-			width: 90px;
+		#javascript {
+			width: 100px;
 			padding: 2px 2px;
 			background-color: #47d147;
 			margin: 0px 4px 4px 0px;
 		}
+		#shell {
+			width: 70px;
+			padding: 2px 2px;
+			background-color: darkgrey;
+			margin: 0px 4px 4px 0px;
+		}
 		#content {
-			width: 600px;
+			width: 700px;
 			position: absolute;
 			left: 0;
 			right: 0;
@@ -149,6 +175,7 @@
 	<body>
 	<center><h2>Projects</h2></center>
 	<a id="home" href="index.html">Home</a>
+	<a id="log" href="log.html">Log</a>
 	<center>
 	<br><br>
 	<div id="sortBy">Sort by: <a id="recent">Most Recent</a>, <a id="best">Best</a></div>
@@ -169,9 +196,6 @@
 	
 </body>	
 <script>
-	document.getElementsByTagName("SPAN").onclick = function() {
-		window.location.href('https://gogeorge.github.io/log.html');
-	}
 	function vanish() {
 		first.style.opacity = "0";
 		setTimeout(function() {first.style.opacity = '1';}, 600);
@@ -191,8 +215,11 @@
 	function tagDoc() {
 		return "<a class='tags' id='document' href='tags.html'>Document</a>";
 	}
-	function tagLib() {
-		return "<a class='tags' id='library' href='tags.html'>Library</a>"
+	function tagJs() {
+		return "<a class='tags' id='javascript' href='tags.html'>Javascript</a>"
+	}
+	function tagSh() {
+		return "<a class='tags' id='shell' href='tags.html'>Shell</a>"
 	}
 	function load() {
 		//by default projects will be sorted by recent
@@ -200,11 +227,11 @@
 		best.style.color = "#92005E";
 		vanish();
 		setTimeout(function() {
-			first.innerHTML = "EasyRegex <span id='date'>(June 2017)<span>" + tagProg() + tagLib();
-			second.innerHTML = "Watch Space <span id='date'>(February 2017)<span>" + tagProg();
-			third.innerHTML = "Bash Profile <span id='date'>(August 2016)<span>" + tagProg();
+			first.innerHTML = "EasyRegex <span id='date'>(June 2017)<span>" + tagProg() + tagJs();
+			second.innerHTML = "Watch Space <span id='date'>(February 2017)<span>" + tagProg() + tagJs();
+			third.innerHTML = "Bash Profile <span id='date'>(August 2016)<span>" + tagProg() + tagSh();
 			fourth.innerHTML = "Afrodita 1.0 <span id='date'>(May 2016)<span>" + tagDoc();
-			fifth.innerHTML = "Yveete <span id='date'>(March 2016)<span>" + tagProg();
+			fifth.innerHTML = "Yveete <span id='date'>(March 2016)<span>" + tagProg() + tagJs();
 
 			first.href = "projects/easy-regex.html";
 			second.href = "projects/watch-space.html";
@@ -222,11 +249,11 @@
 		best.style.color = "grey";
 		vanish();
 		setTimeout(function() {
-			first.innerHTML = "EasyRegex" + tagProg() + tagLib();
-			second.innerHTML = "Yveete" + tagProg();
+			first.innerHTML = "EasyRegex" + tagProg() + tagJs();
+			second.innerHTML = "Yveete" + tagProg() + tagJs();
 			third.innerHTML = "Afrodita 1.0" + tagDoc();
-			fourth.innerHTML = "Watch Space" + tagProg();
-			fifth.innerHTML = "Bash Profile" + tagProg();
+			fourth.innerHTML = "Watch Space" + tagProg() + tagJs();
+			fifth.innerHTML = "Bash Profile" + tagProg() + tagSh();
 
 			first.href = "projects/easy-regex.html";
 			second.href ="projects/yveete.html";
