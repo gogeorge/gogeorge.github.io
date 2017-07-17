@@ -87,8 +87,7 @@
 			100% {opacity: 1;}
 		}
 		code:not(.javascript) {
-			font-size: 28px;
-			text-indent: 10px;
+			font-size: 22px;
 			text-align: center;
 			-webkit-animation: appearText 2s;
 			animation: appearText 2s;
@@ -174,13 +173,13 @@
 			<pre><code>
 	var a = "John has this email: example@gmail.com and Doe has this one example@yahoo.com etc...";
 
-	if (a.match(hasString('@gmail') + or() + hasString('@yahoo') + notString('.gr'))) {
+	if (a.match(has('@gmail') + or() + has('@yahoo') + notString('.gr'))) {
   		console.log("string contains either '@gmail' or '@yahoo' and not '.gr'");
 	} else {
   		console.log('did not match');
 	}
 			</code></pre>
-	<p>In this example, these functions are used instead of regular expressions to achieve the same result.Each function returns a specfic regular expression. For example <code>hasString('@gmail')</code> will check if <code>var a</code> contains '@gmail' and <code>notString('.gr')</code> will check if <code>var a</code> does <em>not</em> contain '.gr'. 
+	<p>In this example, these functions are used instead of regular expressions to achieve the same result.Each function returns a specfic regular expression. For example <code>has('@gmail')</code> will check if <code>var a</code> contains '@gmail' and <code>notString('.gr')</code> will check if <code>var a</code> does <em>not</em> contain '.gr'. 
 	<br><br>
 	For more information visit the <a href="https://github.com/gogeorge/EasyRegex" target="_blank">github repository</a> where it also has a table of the rest functions that can be used.</p>
 			<br><br>

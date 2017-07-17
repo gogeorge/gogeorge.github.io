@@ -211,7 +211,7 @@
 				<br><br>
 				<pre><code>
 	if (question == "hi") {
-		answer = "hey";
+	    answer = "hey";
 	}
 				</code></pre>
 				<br><br>
@@ -219,9 +219,9 @@
 				<br><br>
 				<pre><code>
 	if (question == "hi") { 
-		var msg = new SpeechSynthesisUtterance('hey');
-		window.speechSynthesis.speak(msg);
-		answer = "hey";
+	    var msg = new SpeechSynthesisUtterance('hey');
+	    window.speechSynthesis.speak(msg);
+	    answer = "hey";
 	}
 				</code></pre>
 				<br><br>
@@ -229,9 +229,9 @@
 				<br><br>
 				<pre><code>
 	if (question.toUpperCase() == "HI" || question.toUpperCase() == "HELLO") { 
-		var msg = new SpeechSynthesisUtterance('hey');
-		window.speechSynthesis.speak(msg); 
-		answer = "hey";
+	    var msg = new SpeechSynthesisUtterance('hey');
+	    window.speechSynthesis.speak(msg); 
+	    answer = "hey";
 	}
 				</code></pre>
 				<br><br>
@@ -240,25 +240,25 @@
 				<pre>
 				<code>
 	if (question.match(".*\\bmy name is\\b.*")) {
-		//if what the user types matches the string 'my name is' then:
-		var userName = question.substring(11);
-		//save the name by extracting the substring after the 11th character
-		if (userName.match(/[0-9]/i)) {
-			//if the user typed only numbers or included a number in their name then:
-			var msg1 = new SpeechSynthesisUtterance('Please type your name in letters only');
- 			window.speechSynthesis.speak(msg1);
- 			answer = "Please type your name in letters only";
-		}
-		else if ((userName != null) && (userName.match(/[a-z]/i))) {
-			// if the user typed a name and it is in letters then:
-			var msg2 = new SpeechSynthesisUtterance('I will remember your name as ' + userName); 
- 			window.speechSynthesis.speak(msg2); 
-			localStorage.setItem('userName', userName);
-			answer = "I will remember you as " + userName;
-		} 
-		else if (userName == null) {
-			answer = "You didn't type your name";
-		}
+	    //if what the user types matches the string 'my name is' then:
+	    var userName = question.substring(11);
+	    //save the name by extracting the substring after the 11th character
+	    if (userName.match(/[0-9]/i)) {
+		//if the user typed only numbers or included a number in their name then:
+		var msg1 = new SpeechSynthesisUtterance('Please type your name in letters only');
+ 		window.speechSynthesis.speak(msg1);
+ 		answer = "Please type your name in letters only";
+	    }
+	    else if ((userName != null) && (userName.match(/[a-z]/i))) {
+		// if the user typed a name and it is in letters then:
+		var msg2 = new SpeechSynthesisUtterance('I will remember your name as ' + userName); 
+ 		window.speechSynthesis.speak(msg2); 
+		localStorage.setItem('userName', userName);
+		answer = "I will remember you as " + userName;
+	    } 
+	    else if (userName == null) {
+	        answer = "You didn't type your name";
+	    }
 	}
 				</code></pre>
 				<br><br>

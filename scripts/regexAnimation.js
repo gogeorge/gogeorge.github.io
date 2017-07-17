@@ -3,10 +3,10 @@ function animation() {
 	pseudocode.innerHTML = codeRegex;
 	//erase regexSoda
 	setTimeout(function() { regexSoda.style.opacity = "0";}, 2000);
-	//place hasString()
+	//place has()
 	setTimeout(function() { 
 		regexSoda.style.opacity = "1";
-		regexSoda.innerHTML = "<span style='color:deepskyblue;'>hasString<span id='brackets'>(</span><span id='hasStringParam'>'burger'</span><span id='brackets'>)</span></span>";
+		regexSoda.innerHTML = "<span style='color:deepskyblue;'>has<span id='brackets'>(</span><span id='hasStringParam'>'burger'</span><span id='brackets'>)</span></span>";
 		hasStringParam.style.opacity = "0";
 	}, 2500);
 	//regexSoda changes to a string

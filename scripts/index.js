@@ -28,7 +28,6 @@
 	var proAfrodita = document.getElementById('pro-afrodita');
 	var proBash = document.getElementById('pro-bash-profile');
 	var img21 = document.getElementById('img21');
-	var portofolio = document.getElementById('work-portofolio');
 	var img22 = document.getElementById('img22');
 	var fiverr = document.getElementById('work-fiverr');
 
@@ -44,18 +43,6 @@
 	proAfrodita.onmouseout = function() {
 		img2.style.visibility = "hidden";
 	}
-/*	proBash.onmouseover = function() {
-		img3.style.visibility = "visible";
-	}
-	proBash.onmouseout = function() {
-		img3.style.visibility = "hidden";
-	}*/
-	/*portofolio.onmouseover = function() {
-		portofolio.innerHTML = "This is page is not public";
-	}
-	portofolio.onmouseout = function() {
-		portofolio.innerHTML = "Portofolio";
-	}*/
 	fiverr.onmouseover = function() {
 		img22.style.visibility = "visible";
 	}
@@ -87,6 +74,18 @@
 	work_btn.onmouseover = function() {
 		img22.src = "http://georgevaltas.kissr.com/logo background george.jpg";
 	}
+	//back to top function
+	document.addEventListener('scroll', function() {
+    	if (document.body.scrollHeight == document.body.scrollTop + window.innerHeight) {
+    		back_to_top.style.transform = "rotate(0deg)";
+    	} else {
+    		back_to_top.style.transform = "rotate(180deg)";
+    	}
+	});
+	//link to github repo
+	footer.onclick = function() {
+		window.open('https://www.github.com/gogeorge/gogeorge.github.io');
+	}
 	//birthday event
 	var d = new Date();
 	var now = d.getDate() + "" + (d.getMonth() + 1);
@@ -104,4 +103,3 @@
 	} else { 
 		confetti.style.visibility = "hidden";
 	}
-
