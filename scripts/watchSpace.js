@@ -27,7 +27,7 @@ var myJson;
 function getISSPlaceOcean() {
 	var lat = document.getElementById('isslat').innerHTML;
 	var lng = document.getElementById('isslng').innerHTML;
-	$.getJSON('http://api.geonames.org/oceanJSON?lat=' + lat + '&lng=' + lng + '&username=gogeorge', function(data) {
+	$.getJSON('httpß://api.geonames.org/oceanJSON?lat=' + lat + '&lng=' + lng + '&username=gogeorge', function(data) {
 		myJson = data;
 		if (JSON.stringify(data).match('ocean')) {
 			$('#text2').html("Location of the International Space Station: &nbsp<br><span style='font-size: 40px;color: #92005E;'>" + data.ocean.name + "</span>");

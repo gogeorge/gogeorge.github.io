@@ -88,6 +88,7 @@
 			font-size: 15px;
 			opacity: 0.8;
 			cursor: pointer;
+			-webkit-user-select: none;
 		}
 		#programming {
 			width: 100px;
@@ -159,10 +160,10 @@
 		<p>Choose a tag:</p>
 		<div id='tags'> 
 			<br><br>
-			<div class='tags' id='programming'>Programming</div>
-			<div class='tags' id='documents'>Document</div>
-			<div class='tags' id='javascript'>Javascript</div>
-			<div class='tags' id='shell'>Shell</div>
+			<a class='tags' id='programming'>Programming</a>
+			<a class='tags' id='documents'>Document</a>
+			<a class='tags' id='javascript'>Javascript</a>
+			<a class='tags' id='shell'>Shell</a>
 		</div>
 		<br><br>
 		<div id='results'></div>
@@ -182,7 +183,7 @@
 				javascript.style.boxShadow = "2px 2px 2px darkgrey";
 				shell.style.backgroundColor = "darkgrey";
 				shell.style.boxShadow = "2px 2px 2px darkgrey";
-				for (i = 0; i < 4; i++) {	
+				for (i = 0; i < data.programming.length; i++) {	
 					results.innerHTML += "<a href=" + data.programming[i].url + " target='_blank'>" + data.programming[i].name + "</a><br><a id='desc'>" + data.programming[i].description + "</a><br><br>";
 				}
 			} else {
@@ -202,7 +203,7 @@
 				javascript.style.boxShadow = "2px 2px 2px darkgrey";
 				shell.style.backgroundColor = "darkgrey";
 				shell.style.boxShadow = "2px 2px 2px darkgrey";
-				for (i = 0; i < 1; i++) {
+				for (i = 0; i < data.document.length; i++) {
 					results.innerHTML += "<a href=" + data.document[i].url + " target='_blank'>" + data.document[i].name + "</a><br><a id='desc'>" + data.document[i].description + "</a><br><br>";
 				}
 			} else {
@@ -222,7 +223,7 @@
 				documents.style.boxShadow = "2px 2px 2px darkgrey";
 				shell.style.backgroundColor = "darkgrey";
 				shell.style.boxShadow = "2px 2px 2px darkgrey";
-				for (i = 0; i < 3; i++) {
+				for (i = 0; i < data.javascript.length; i++) {
 					results.innerHTML += "<a href=" + data.javascript[i].url + " target='_blank'>" + data.javascript[i].name + "</a><br><a id='desc'>" + data.javascript[i].description + "</a><br><br>";
 				}				
 			} else {
@@ -242,7 +243,7 @@
 				documents.style.boxShadow = "2px 2px 2px darkgrey";
 				javascript.style.backgroundColor = "#47d147";
 				javascript.style.boxShadow = "2px 2px 2px darkgrey";
-				for (i = 0; i < 1; i++) {
+				for (i = 0; i < data.shell.length; i++) {
 					results.innerHTML += "<a href=" + data.shell[i].url + " target='_blank'>" + data.shell[i].name + "</a><br><a id='desc'>" + data.shell[i].description + "</a><br><br>";
 				}
 			} else {

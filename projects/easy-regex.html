@@ -110,9 +110,11 @@
 			width: 800px;
 			font-family: Courier;
 			text-align: left;
-		}	
+		}
+		#regexcolor { color: #b32d00; }
+		#deleteCond { -webkit-transition: opacity 1s;}
 		#spanMatch1 { -webkit-transition: opacity 1s;}
-		#regexSoda { -webkit-transition: opacity 1s; color: #b32d00;}
+		#regexBurger { -webkit-transition: opacity 1s;}
 		#regexTwo { -webkit-transition: opacity 1s; color: #b32d00;}
 		#hasStringParam { visibility: hidden; color: #b32d00; }
 		#hasStringParam2 { visibility: hidden; color: #b32d00; }
@@ -145,43 +147,12 @@
 			<p>
 			EasyRegex is a Javascipt library that makes it easier to use regular expressions.
 			<br><br>
-			Regular Expressions are complex sequences of symbols and characters that are used to find and search somethign in a string. Regular expressions can check if a string contains numbers or a specific word/phrase etc.
+			Regular Expressions are complex sequences of symbols and characters that are used to find and search something in a string. Regular expressions can check if a string contains numbers or a specific word/phrase etc.
 			<br><br>
-			The library is consisted of several functions, each with appropriate and easy to remember names, that <em>return</em> their regular expression. The functions can be combined thus making it easier for the user to achieve what they want.
+			The library is consisted of several methods (like functions), each with appropriate and easy to remember names, that <em>return</em> a regular expression. The methods can be combined thus making it easier for the user to achieve what they want.
 			<br><br>
-			Here is an example:
-			<br><br>
-			Let's say you want to check if a string contains gmail or yahoo email addresses but not any greek addresses which end in '.gr'. In other words, you want to check if the string contains '@gmail' OR '@yahoo' but NOT '.gr'. Let the string be <code>var a</code>.
-			<br><br>
-			So without using any libraries this is a possible way to check the string:
-			<br>
-			<pre><code class='javascript'>
-	var a = "John has this email: example@gmail.com and Doe has this one example@yahoo.com etc...";
-
-	if (a.match('.*\b@gmail\b.*') || (a.match('.*\b@yahoo\b.*') && a.match('.*^(?!.*.gr).*$'))) {
-  		console.log("string contains either '@gmail' or '@yahoo' and not '.gr'");
-	} else {
-  		console.log('did not match');
-	}
-	/*
-	The string contains everything that is needed and it doesn't contain
-	a greek email therefore the string matches the regular expressions
-	*/
-	</code></pre>
-			<p> The regular expressions on the above code block look confusing and complex when you can use this library to achieve something less confusing and more 'readable':</p>
-			<br>
-			<pre><code>
-	var a = "John has this email: example@gmail.com and Doe has this one example@yahoo.com etc...";
-
-	if (a.match(has('@gmail') + or() + has('@yahoo') + notString('.gr'))) {
-  		console.log("string contains either '@gmail' or '@yahoo' and not '.gr'");
-	} else {
-  		console.log('did not match');
-	}
-			</code></pre>
-	<p>In this example, these functions are used instead of regular expressions to achieve the same result.Each function returns a specfic regular expression. For example <code>has('@gmail')</code> will check if <code>var a</code> contains '@gmail' and <code>notString('.gr')</code> will check if <code>var a</code> does <em>not</em> contain '.gr'. 
-	<br><br>
-	For more information visit the <a href="https://github.com/gogeorge/EasyRegex" target="_blank">github repository</a> where it also has a table of the rest functions that can be used.</p>
+			Instead of showing examples here, check the <a href="https://github.com/gogeorge/EasyRegex" target="_blank">documentation</a> which is on github where there are many examples of how to use this library.
+			</p>
 			<br><br>
 			<p><span style="color: darkgrey">&#8764 June, 2017</span></p>
 			<br><br>

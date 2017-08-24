@@ -460,11 +460,12 @@
 			.dropdown-content { width: 1000px; text-indent: 20px; font-size: 30px;}
 			.dropdown-content2 { width: 1000px; text-indent: 20px; font-size: 30px;}
 			.dropbtn { font-size: 60px;}
-			.dropbtn2 { position: relative; left: -100px; font-size: 60px;}
+			.dropbtn2 { position: relative; left: -150px !important; font-size: 60px;}
 			#about { font-size: 60px;}
 			#img1,#img2,#img3,#img21,#img22 { display: none;}
 			#gmail, #github { transform: scale(1.4);}
 			#icons { top: 30px; }
+			#back_to_top { visibility: hidden; }
 		}
 		@media screen and (max-device-width: 600px) and (orientation: landscape) {
 			html { zoom: 1.5;}
@@ -478,6 +479,7 @@
 			#gmail, #github { transform: scale(1.4);}
 			#icons { top: 30px; }
 			#img1,#img2,#img3,#img21,#img22 { left:0; right:0; max-width: 120%;}
+			#back_to_top { visibility: hidden; }
 		}
 		@media screen and (max-device-width: 800px) and (orientation: landscape) {
 			.dropdown-content, .dropdown-content2 { 
@@ -489,6 +491,7 @@
 			#img1,#img2,#img3,#img21,#img22 { left:0; right:0; max-width: 120%;}
 			#gmail, #github { transform: scale(1.4);}
 			#icons { top: 30px; }
+			#back_to_top { visibility: hidden; }
 		}
 		/* general resizes */
 		@media screen and (min-device-width: 1500px) and (orientation: landscape) {
