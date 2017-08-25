@@ -172,7 +172,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
 	$.getJSON("https://gogeorge.github.io/site-data.json", function(data) {
-		programming.onclick = function() {
+		programming.onclick = function programmingTag() {
 			if (results.innerHTML == "") {
 				programming.style.backgroundColor = "#998c00";
 				programming.style.boxShadow = "0px 0px 0px";
@@ -191,6 +191,9 @@
 				programming.style.boxShadow = "2px 2px 2px darkgrey";
 				results.innerHTML = "";
 			}
+		}
+		programming.ontouchstart = function() { 
+			programmingTag();
 		}
 		documents.onclick = function() {
 			if (results.innerHTML == "") {
