@@ -55,7 +55,7 @@
 		    color: black;
 		    text-align: center;
 		    text-decoration: none;
-		    font-family: Comic Sans MS;
+		    font-family: Helvetica;
 		    -webkit-transition: font-size 1s;
     		transition: font-size 1s;
     		font-size: 20px;
@@ -67,9 +67,7 @@
 		li a:hover {
 			font-size: 30px;
 			color: #92005E;
-			font-family: Helvetica;
 			font-weight: lighter;
-
 		}
 		#icons {
 			position: absolute;
