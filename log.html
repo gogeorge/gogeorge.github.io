@@ -3,7 +3,6 @@
 		<title>George | Log</title>
 		<link rel="icon" href="images/logo background george.png"/>
 		<meta charset="UTF-8">
-		<link rel='stylesheet' href='css/awesomplete.css'> 
 		<style>
 		h2 {
 			font-size: 40px;
@@ -87,7 +86,7 @@
 			<div id='content'>
 				<div id='update'></div>
 				<br>
-				<a href='projects/easy-regex.html' id='event' class='20176'>EasyRegex <span id='date'>(June 2017)</span></a>
+				<a href='projects/easy-regex.html' id='event' class='62017'>EasyRegex <span id='date'>(June 2017)</span></a>
 				<br><span>.</span><br>
 				<br><span>.</span><br>
 				<br><span>.</span><br>
@@ -114,22 +113,26 @@
 	<script>
 		var d = new Date();
 		//last event needs to be changed when there is a new project (year + month)
-		var lastEvent = document.getElementsByTagName("A")[1].getAttribute('class');
-		var now = d.getFullYear() + "" + (+d.getMonth() + +"1");
+		var lastEvent = document.getElementsByTagName("A")[1].getAttribute('class')
+		var now = (+d.getMonth() + +"1") + "" + d.getFullYear()
 		//this is my second loop i ever did in my life
-		if (now > lastEvent) {
-			if (now.substring(0, 4) == lastEvent.substring(0, 4)) {
-				var n = now - lastEvent;
+		
+		if (parseInt(now) > parseInt(lastEvent)) {
+			console.log('if true')
+			if (now.substring(now.indexOf('20'), now.length) == lastEvent.substring(lastEvent.indexOf('20'), lastEvent.length)) {
+				var n = parseInt(now.substring(0, now.indexOf('20'))) - parseInt(lastEvent.substring(0, lastEvent.indexOf('20')));
 				if (n != 0) {
 					for (i = 0; n > i; i++) {
 						update.innerHTML += "<br><span>.</span><br>";
 					}	
 				}
 			} else {
-				var y = now.substring(0, 4) - lastEvent.substring(0, 4);
+				var y1 = parseInt(now.substring(now.indexOf('20'), now.length))
+				var y2 = parseInt(lastEvent.substring(lastEvent.indexOf('20'), lastEvent.length))
+				var y = y1 - y2;
 				y = y * 12;
-				var n = now.substring(4);
-				n = +y + +n;
+				var n = parseInt(now.substring(0, now.indexOf('20')));
+				n = parseInt(y) + parseInt(n);
 				for (i = 0; n > i; i++) {
 					update.innerHTML += "<br><span>.</span><br>";
 				}
