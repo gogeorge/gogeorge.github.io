@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>George | Blog</title>
+	<link rel="icon" href="../../images/logo background george.png">
+	<link rel="stylesheet" href="../../css/github.css">
+	<script src='../../scripts/highlight.pack.js'></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<style>
+	h2 {
+		font-size: 40px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		border: none;
+		background-color: white;
+		position: relative;
+		top: 0px;
+		-webkit-animation: titleMove 3s;
+		animation: titleMove 3s;
+		}
+		h2:hover {color: #92005E;}
+
+		@-webkit-keyframes titleMove {
+			0% {top: -75px;}
+			100% {top: 0px;}
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+	#home {
+		height: 50px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 25px;
+		position: absolute;
+		top: 50px;
+		right: 5%;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		-webkit-transition: color 2s;
+		transition: color 2s;
+		-webkit-transition: font-size 2s;
+		transition: font-size 2s;
+		}
+	#home:hover {
+		color: #92005E;
+		font-size: 30px;
+	}
+	#blog {
+		height: 50px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 25px;
+		position: absolute;
+		top: 50px;
+		left: 5%;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		-webkit-transition: color 2s;
+		transition: color 2s;
+		-webkit-transition: font-size 2s;
+		transition: font-size 2s;
+		}
+	#blog:hover {
+		color: #92005E;
+		font-size: 30px;
+	}
+	p {
+		position: relative;
+		top: 80px;
+		width: 700px;
+		opacity: 1;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 20px;
+		text-indent: 25px;
+		text-align: left;
+		-webkit-animation: opac 4s;
+		animation: opac 4s;
+	}
+	@-webkit-keyframes opac {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+	}
+	a {
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 20px;
+		color: black;
+		text-decoration: none;
+		-webkit-transition: color 1s;
+		transition: color 1s;
+	}
+	a:hover {
+		color: #92005E;
+	}
+	p a {
+		color: #92005E;
+	}
+	#date {
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 20px;
+		color: grey;
+	}
+	pre {
+		text-align: left;
+		font-size: 15px;
+	}
+	@media only screen and (max-device-width: 950px) and (orientation: portrait) { 
+		p {font-size: 25px;} 
+	}
+	</style>
+</head>
+<body>
+	<center><h2>How to Make a Simple JavaScript Library</h2></center>
+	<a id="blog" href="../blog.html">Blog</a>
+	<a id="home" href="../../index.html">Home</a>
+	<center>
+		<p>
+			If you go on GitHub and enter the keyword 'library' you will see that most libraries are made in JavaScript followed by Java and then C++.
+			<br><br>
+			I will first explain the things that you have to do in order to develop a library. These are not steps, just things you might want to consider. In the end I will give an example of a very small library which hopefully you can use it an expand it into a better one.
+			<br><br>
+			<em style="font-size: 25px;font-weight: normal;">Creating the appropriate files for a library,</em>
+			<br><br>
+			This focuses on what is a <code>dist</code> and <code>src</code> folder etc.
+			<br><br>
+			This is how the file structure of a simple library that focuses on solving math problems should look like:
+			<br><br><br><br>
+			MathLib Repository:
+			<br><br>
+			+-- dist
+			<br>|
+			<br>| &nbsp&nbsp&nbsp&nbsp+-- mathLib.js
+			<br>| &nbsp&nbsp&nbsp&nbsp+-- mathLib.min.js
+			<br>|
+			<br>
+			+-- src
+			<br>|
+			<br>| &nbsp&nbsp&nbsp&nbsp+-- statistics.js
+			<br>| &nbsp&nbsp&nbsp&nbsp+-- summations.js
+			<br>| &nbsp&nbsp&nbsp&nbsp+-- vectors.js
+			<br>|
+			<br>
+			+-- README.md
+			<br>
+			+-- LICENSE.md
+			<br><br><br><br>
+			<em>What is <code>dist</code>?</em>
+			<br><br>
+			<code>dist</code> is a shorter version of the word 'distribution' or 'distributable'. This folder is consisted of the file (ex: mathLib.js) which includes all the code of the library. If the file is large you might conside having the same file again but compressed (ex: mathLib.min.js).
+			<br><br>
+			<em>What is <code>src</code>?</em>
+			<br><br>
+			<code>src</code> is a shorter version of the word 'source'. This folder is usually consisted of several scripts which all together form the script (ex: mathLib.js) in the <code>dist</code> folder. 
+			<br><br>
+			Think of the script mathLib.js as a file with 3000 lines of code. The first 1000 lines are functions that help with statistics for example <code>findAverage()</code>, <code>findRange()</code> and so on. Then the next 1000 lines are function about summations and the last 1000 are about vectors. So as you can see, the script mathLib.js can be divided into 3 scripts: statistics.js, summations.js and vectors.js. All three scripts make up the <code>src</code> folder.
+			<br><br>
+			<em>What is <code>README.md</code>?</em>
+			<br><br>
+			<code>README.md</code> is the file which includes the documentation of the library. If you reached this far you probably already know this.
+			<br><br>
+			<em style="font-size: 25px;font-weight: normal;">Finding the Appropirate License,</em>
+			<br><br>
+			In short, if you are fine with:
+			<br><br>
+			- Developers taking your library, modifying it and then giving you attribution if they upload their new version then you want an <a href='https://choosealicense.com/licenses/mit/' target='_blank'>MIT License</a>
+			<br><br>
+			- Developers doing whatever they want then you want <a href='https://choosealicense.com/licenses/unlicense/' target='_blank'>The Unlicense</a>
+			<br><br>
+			<a href='https://choosealicense.com/licenses/' target='_blank'>Here</a> are the rest of the licenses
+			<br><br>
+			<em style="font-size: 25px;font-weight: normal;">Developing the Library,</em>
+			<br><br>
+			We will now take the idea of mathLib and develop a part of the library. mathLib is supposed to be a library where you can use functions and methods to solve difficult math problems that would require many lines of code to achieve with just plain JavaScript.
+			<br><br>
+			Lets make a function called <code>findAverage()</code> which is self explantory and thus easier for the developers using this library to remember it.
+			<br><br><br><br><br><br>
+			<pre>
+				<code>
+					/* The function is suppoed to find the average/mean of an array like this */
+					var array = [ 2, 4, 3 ]
+
+					findAverage(array) // output => 3
+
+					/* Now lets actually make the function */
+					function findAverage( variable ) {
+						// 'variable' is the variable of the array which we want to find its average
+						// we want to add all the numbers in the array first:
+						var sum = 0;
+						// then make a for loop and add all the numbers to the 'var sum'
+						for ( i = 0; i < variable.length; i++ ) {
+							sum += variable[ i ]
+	  					}
+	  					// now the sum is 2 + 4 + 3 = 9, we now divide 9 by 3
+	  					return sum/variable.length
+					}
+				</code>	
+			</pre>
+			<p>This is what one function looks like. But for a library you need more than just one function so this is one we can organise our <code>dist/mathLib.js</code> script:</p>
+			<br><br><br><br><br><br>
+			<pre>
+				<code>
+					/* 
+					  The mathLib.js file will be divided into 3 parts. 
+					  A place for all the Statistics functions (where findAverage() is one of them), 
+					  Summations and Vectors. We start of with the statistics functions
+					*/
+					var stat = {
+						findAverage: function( variable ) {
+							var sum = 0;
+							for ( i=0; i < variable.length; i++ ) {
+								sum += variable[ i ]
+					  		}
+					  		return sum/variable.length
+					  		/* 
+					  		  so here to use this function you need to do it
+					  		  like this: stat.findAverage()
+					  		*/
+						}
+						findRange: function( variable ) {
+							/* 
+							  Here you can do this by yourself. Make a function were it 
+							  detects the smallest and largest number in an array and subtracts 
+							  them to find the difference
+							*/
+						}
+					}
+					var sumt = {
+						// and so on...
+					}
+					var vect = {
+						// and so on...
+					}
+				</code>
+			</pre>
+			<p>So this is it. You don't have to make your own library with this exact structure (I show another way to develop the mathLib.js file below) but it is a good start. Your <code>src/statistics.js</code> script will include the <code>stat</code> object the <code>src/summations.js</code> will include the <code>sumt</code> object and so on.
+			<br><br>
+			<em style="font-size: 25px;font-weight: normal;">Developing the Library using Array Methods,</em>
+			<br><br>
+			Here is another way to develop the <code>dist/mathLib.js</code> script:</p>
+			<br><br><br><br>
+			<pre>
+				<code>
+					Array.prototype.findAverage = function() {
+						/* 
+					    	'this' is the variable attached to this 
+					    	method ex. 'var array'
+						*/
+						var sum = 0;
+						for ( i=0; i < this.length; i++ ) {
+							sum += this[ i ]
+	  					}	
+	  					return sum/this.length
+					}
+					/* 
+					  And then you would have Array.prototype.findRange() and so on.
+					  To the method we just created you would do this:
+					*/
+					var array = [ 2, 4, 3 ]
+
+					array.findAverage()
+
+					// or by using the object we created previously:
+
+					stat.findAverage(array)
+
+					// and there are many other ways...
+				</code>
+			</pre>
+			<p>Just realised that someone has already made a library called mathLib.js so all the examples that I showed here have nothing do to with that library.</p>
+			<br><br><br><br><br><br>
+			<span id='date'>~ 29/10/2017</span>
+		</p>
+	</center>
+</body>
+</html>
