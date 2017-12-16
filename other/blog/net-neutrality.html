@@ -5,6 +5,7 @@
 	<link rel="icon" href="../../images/logo background george.png">
 	<style>
 	h2 {
+		width: 600px;
 		font-size: 40px;
 		font-family: Helvetica;
 		font-weight: lighter;
@@ -107,6 +108,13 @@
 		font-size: 20px;
 		color: grey;
 	}
+	#quotes {
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 20px;
+		text-decoration: italic;
+		color: grey;
+	}
 	pre {
 		text-align: left;
 		font-size: 15px;
@@ -122,6 +130,7 @@
 	<a id="home" href="../../index.html">Home</a>
 	<center>
 		<p>
+			<!-- main source: https://www.reddit.com/r/technology/comments/6odans/fcc_now_says_there_is_no_documented_analysis_of/dkgxguo/?context=3 -->
 			<!-- 
 			
 			Since then, many companies such as Google, Amazon, Facebook, Reddit and many more raised awareness of this issue by placing banners on their websites, explaining what is net neutrality and why net neutrality rules should not be modified. The show “Last Week Tonight with James Oliver” made two episodes regarding Pai’s proposal against net neutrality in which Oliver mentioned that everyone should go to the FCC website and file a complaint that net neutrality should remain. The website received over 2.6 million complaint (comments).
@@ -132,14 +141,61 @@
 			<br><br>
 			<em style="font-size: 25px;font-weight: normal;">What is Net Neutrality,</em>
 			<br><br>
-			Net neutrality is a list of rules that allow every internet user to have access to all the internet content and <em>prevent</em> service providers like Comcast and Verizon from intentionally throttling the bandwidth of certain users or intentionally slowing down specific websites/sources.
+			Net neutrality is a list of rules that allow every internet user to have access to all the internet content. Without Net Neutrality, service providers like Comcast and Verizon can intentionally throttle the bandwidth of certain users or intentionally slow down specific websites/sources and ask you to pay more to be able to have access to faster internet speeds.
 			<br><br>
-			Net neutrality laws existed for a while but in this investigation we will focus on Ajit Pai. In 2017, Ajit Pai (Chairman of the FCC under the Trump Administration) wanted to change the net neutrality rules so they can be “modernized” to “match the reality of the modern marketplace”. The members of the FCC decided to move forward with Pai’s proposal and subsequently this caused a lot of criticism because if the net neutrality rules would be deregulated, then service providers which are private firms would have control of the internet and who sees what content on it.
+			Net neutrality laws existed for a while but in this investigation we will focus on Ajit Pai. In 2017, Ajit Pai (Chairman of the FCC under the Trump Administration) wanted to change the net neutrality rules so they can be “modernized” to “match the reality of the modern marketplace”. The members of the FCC decided to move forward with Pai’s proposal and subsequently this caused a lot of criticism because if the net neutrality rules would be deregulated, then service providers which are private firms would have control over the internet and control who sees what content on it.
 			<br><br>
 			<em style="font-size: 25px;font-weight: normal;">Back to Context,</em>
 			<br><br>
+			John Oliver made an episode about <a href='https://www.youtube.com/watch?v=92vuuZt7wak&feature=youtu.be&t=15m25s' target='_blank'>Net Neutrality</a> in which he encourages his viewers to visit the FCC website and comment why they need net neutrality. On the same day, the FCC website went down due to multiple DDoS attacks reporting that they were receiving more than 160 comments per minute. On top of that, the FCC claims that there is <a href='https://gizmodo.com/fcc-now-says-there-is-no-documented-analysis-of-the-cyb-1797073113' target='_blank'>no documented analysis of the DDoS attack</a>.
+			<br><br>
+			The fact that there is no documented analysis of the attack is rather shady. You would expect such a huge and important website to be more prepared and have an analysis when attacked by external actors.
+			<br><br>
+			<em style="font-size: 25px;font-weight: normal;">What is true from what the FCC claims?</em>
+			<br><br>
+			We will now take the shady parts and shine some light. David Bray, FCC's chief information officer said that the DDoS attacks were:
+			<br><br>
+			<span id='quotes'>
+				<em>
+				"deliberate attempts by external actors to bombard the FCC’s comment system with a high amount of traffic to our commercial cloud host."
+				</em>
+			</span>
+			<br><br>
+			But actually there weren't any external factors involved in the attack.
+			<br><br>
+			<img src="../../images/blog-net-neutrality.png" alt="Fcc.gov availability chart" title="Fcc.gov availability chart"><br><a target="_blank" href="http://currentlydown.com/fcc.gov#2017-05-08">Fcc.gov availability chart</a> by CurrentlyDown.com
+			<br><br>
+			As you can see there is no downtime on the day of the attack which means that the website was working perfectly. So since the CDN (Content Delivery Network) of the FCC site was not affected, the attack was internal and <em>not</em> external.
+			<br><br>
+			<!-- https://motherboard.vice.com/en_us/article/evg3xw/dead-people-are-posting-anti-net-neutrality-comments-to-the-fcc-website -->
+			According to <a href='http://www.zdnet.com/article/a-bot-is-flooding-the-fccs-website-with-fake-anti-net-neutrality-comments/' target='_blank'>this</a> news report, at midnight on the 7th May 2017, the FCC experienced the DDoS attack. Since then, there is a bot that posts anti net neutrality comments:
+			<br><br>
+			<img src="../../images/blog-net-neutrality-2.png">
+			<br><br>
+			Here is the very long link to the <a href='https://www.fcc.gov/ecfs/search/filings?proceedings_name=17-108&q=filers.name:(John%20Smith)%20AND%20text_data:((((%22Dear%20%22%20OR%20%22To%20%22%20OR%20%22%22)%20AND%20(%22Chairman%20Pai%22%20OR%20%22Mr%20Pai%22)%20AND%20(%22,%20%22%20OR%20%22:%20%22)%20OR%20%22%22)%20AND%20%22I%22%20AND%20(%22would%20like%20to%20comment%20on%22%20OR%20%22have%20concerns%20about%22%20OR%20%22am%20a%20voter%20worried%20about%22%20OR%20%22concerned%20about%22)%20AND%20(%22net%20neutrality%22%20OR%20%22Network%20Neutrality%22%20OR%20%22Internet%20regulation%22%20OR%20%22the%20FCC%20rules%20on%20the%20Internet%22)%20AND%20%22I%22%20AND%20(%22urge%22%20OR%20%22encourage%22%20OR%20%22ask%22%20OR%20%22recommend%22%20OR%20%22request%22%20OR%20%22advocate%22)%20AND%20(%22the%20commission%22%20OR%20%22the%20commissioners%22%20OR%20%22Ajit%20Pai%22%20OR%20%22government%22)%20AND%20%22to%22%20AND%20(%22reverse%22%20OR%20%22repeal%22%20OR%20%22undo%22))%20OR%20%22The%20unprecedented%20regulatory%20power%22)&sort=date_disseminated,DESC' target='_blank'>comments</a>
+			<br><br>
+			It looks like "John Smith" has posted 303 anti net neutrality comments (all of them with the same text) in total. At least 20 identical comments were posted by him on the 14th of May 2017.
+			<br><br>
+			This is another example of the same person posting the same text multiple times in one day:
+			<br><br>
+			<img src="../../images/blog-net-neutrality-3.png">
+			<br><br><br>
+			Furthermore, there have been cases where the <a href='https://motherboard.vice.com/en_us/article/evg3xw/dead-people-are-posting-anti-net-neutrality-comments-to-the-fcc-website' target='_blank'>bot commented with names of people who have passed away</a>
+			<br><br>
+			In the end it is not sure who is behind this bot but one possible answer is that the FCC itself developed the bot to post comments with people's names, addresses and zip codes without their consent. Then the FCC claimed that their website received a DDoS attack although that this is not true as I previously mentioned.
+			<br><br>
+			<!-- or this news report: http://www.zdnet.com/article/fcc-says-ddos-attacks-not-net-neutrality-comments-tied-up-comments-system/
 
-			<span id='date'>~ -/10/2017</span>
+			/////////
+
+				- http://www.emprata.com/reports/fcc-restoring-internet-freedom-docket/ 
+				- http://www.zdnet.com/article/a-bot-is-flooding-the-fccs-website-with-fake-anti-net-neutrality-comments/
+				- https://www.fcc.gov/ecfs/search/filings?date_disseminated=%5Bgte%5D2017-05-07%5Blte%5D2017-05-08&limit=25&offset=175&proceedings_name=17-108&sort=date_disseminated,DESC
+			-->
+
+			<br><br>
+			<span id='date'>17/12/2017</span>
+			<br><br>
 		</p>
 	</center>
 </body>
