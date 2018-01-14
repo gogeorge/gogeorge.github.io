@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>George | Blog</title>
+	<link rel="icon" href="../../images/logo background george.png">
+	<style>
+	h2 {
+		width: 600px;
+		font-size: 40px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		border: none;
+		background-color: white;
+		position: relative;
+		top: 0px;
+		-webkit-animation: titleMove 3s;
+		animation: titleMove 3s;
+		}
+		h2:hover {color: #92005E;}
+
+		@-webkit-keyframes titleMove {
+			0% {top: -75px;}
+			100% {top: 0px;}
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+	#home {
+		height: 50px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 25px;
+		position: absolute;
+		top: 50px;
+		right: 5%;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		-webkit-transition: color 2s;
+		transition: color 2s;
+		-webkit-transition: font-size 2s;
+		transition: font-size 2s;
+		}
+	#home:hover {
+		color: #92005E;
+		font-size: 30px;
+	}
+	#blog {
+		height: 50px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 25px;
+		position: absolute;
+		top: 50px;
+		left: 5%;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		-webkit-transition: color 2s;
+		transition: color 2s;
+		-webkit-transition: font-size 2s;
+		transition: font-size 2s;
+		}
+	#blog:hover {
+		color: #92005E;
+		font-size: 30px;
+	}
+	p {
+		position: relative;
+		top: 80px;
+		width: 700px;
+		opacity: 1;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 20px;
+		line-height: 30px;
+		text-indent: 25px;
+		text-align: left;
+		-webkit-animation: opac 4s;
+		animation: opac 4s;
+	}
+	@-webkit-keyframes opac {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+	}
+	a {
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 20px;
+		color: black;
+		text-decoration: none;
+		-webkit-transition: color 1s;
+		transition: color 1s;
+	}
+	a:hover {
+		color: #92005E;
+	}
+	p a {
+		color: #92005E;
+	}
+	#date {
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 20px;
+		color: grey;
+		position: relative;
+		top: 500px;
+	}
+	#quotes {
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 20px;
+		text-decoration: italic;
+		color: grey;
+	}
+	pre {
+		text-align: left;
+		font-size: 15px;
+	}
+	#table {
+		position: relative;
+		top: 50px;
+		width: 700px;
+		height: 100px;
+		font-family: courier;
+		text-align: left;
+		font-weight: lighter;
+		font-size: 15px;
+		color: grey;
+	}
+	#table2 {
+		position: relative;
+		top: 230px;
+		width: 700px;
+		height: 100px;
+		font-family: courier;
+		text-align: left;
+		font-weight: lighter;
+		font-size: 15px;
+		color: grey;
+	}
+	#text2 {
+		position: relative;
+		top: 200px;
+	}
+	#text3 {
+		position: relative;
+		top: 300px;
+	}
+	@media only screen and (max-device-width: 950px) and (orientation: portrait) { 
+		p {font-size: 25px;} 
+		#table {font-size: 25px;} 
+		#table2 {font-size: 25px; top: 350px;}
+		#text2 { top: 370px; }
+		#text3 { top: 470px; }
+		#date { font-size: 15px }
+	}
+	</style>
+</head>
+<body>
+	<center><h2>Celebrities with Divorced Parents are more Likely to Divorce Later in Life</h2></center>
+	<a id="blog" href="../blog.html">Blog</a>
+	<a id="home" href="../../index.html">Home</a>
+	<center>
+		<p>
+			<br><br>
+			After collecting a lot of data from Wikipedia I concluded that celebrities who in their childhood/adolescense had parents who divored are more likely to divorce later in life with their partner. Meanwhile celebrities with undivorced parents have a lower chance of divorcing later in life.
+			<br><br>
+			<em style="font-size: 25px;font-weight: normal;">Process of Gathering the Data,</em>
+			<br><br>
+			You can skip this directly and go to the next sub-heading that shows the results of the research.
+			<br><br>
+			To get the data on celebrities I made a program that would read the names of the celebrities (from an array) and then for each name would go to their corresponding wikipedia page and check if the parents of the celebrity had divorced in the "Early life" section of their wikipedia page. For example if you look at <a href='https://en.wikipedia.org/wiki/Ben_Affleck#Early_life' target='_blank'>Ben Affleck</a>'s wikipedia page his parents divorced when he was 12. If the program detected that the celebrity had divorced parents it would then check if the celebrity had divorced with his/her partener as well. For this, the program would go to the "Personal life" section of the wikipedia page and search for keywords such as "divorce" and "seperation". Again, as an example, <a href='https://en.wikipedia.org/wiki/Ben_Affleck#Personal_life' target='_blank'>Ben Affleck</a>'s personal life section states that he divorced with Jennifer Garner.
+			<br><br>
+			For more details on the programming, click the link to the <a href='https://github.com/gogeorge/wikipedia-api#gathering-data' target='_blank'>github repository</a>
+			<br><br>
+			<em style="font-size: 25px;font-weight: normal;">Results,</em>
+			<br><br>
+			After writing the program, as a pilot sample, I copied the list of all the celebrities from this <a href='http://people.com/celebrities/' target='_blank'>website</a>. Not all of the celebrities had a wikipedia page so out of +100 names, only 85 were captured by the program.
+			<br><br>
+			This were the results from the pilot sample:
+			</p>
+			<div id='table'>
+			<br><br>
+				Celebrities = 85 (pilot sample)
+				<br><br>
+				| Celebrities with divorced parents = 15 |
+				<br>
+				| Celebrities who divorced later in life = 10 | 
+				<br><br>
+				| <b>Percentage = 66%</b> |
+				<br><br><br><br>
+				| Celebrities with undivorced parents = 70 | 
+				<br>
+				| Celebrities who divorced later in life = 20 | 
+				<br><br>
+				| <b>Percentage = 28.6%</b> |
+				<br><br>
+			</div>
+			<br><br>
+			<p id='text2'>
+			This data shows that out of the celebrities with divorced parents (15), 66% (10/15) of them will divorce later in life. Meanwhile the celebrities with undivorced parents (70), only 28.6% (20/70) of them will divorce later in life. This shows a correlation that celebrities with divorced parents have a higher chance of divorcing.
+			<br><br>
+			After the pilot sample, I searched for longer lists so I can have a larger sample. I copied the names from this <a href='https://www.randomlists.com/random-celebrities' target='_blank'>list</a> with a sample of 325 celebrities and this <a href='http://candiest.com/celebrity-directory/' target='_blank'>list</a> with a sample of 525 celebrities. The complete sample was supposed to be 850 however it wasn't for the following reasons:
+			<br><br>
+			1.) The two lists have some names in common so one of the duplicated name had to be removed (I didn't do this manually).
+			<br><br>
+			2.) Some celebrities do not have a wikipedia page
+			<br><br>
+			3.) For each celebrity, the program had to make 2 requests to the Wikipedia API so in total around 1300 request were made to Wikipedia in less than 15 seconds. During this process Wikipedia blocked me for passing over the request limit and so a part of the list wasn't in the sample.
+			<br><br>
+			In the end, out of the 850 celebrities only 257 made it to the sample:
+			</p>
+			<div id='table2'>
+			<br><br>
+				Celebrities = 257 (sample)
+				<br><br>
+				| Celebrities with divorced parents = 48 |
+				<br>
+				| Celebrities who divorced later in life = 33 | 
+				<br><br>
+				| <b>Percentage = 73.3%</b> |
+				<br><br><br><br>
+				| Celebrities with undivorced parents = 209 | 
+				<br>
+				| Celebrities who divorced later in life = 63 | 
+				<br><br>
+				| <b>Percentage = 30.1%</b> |
+				<br><br>
+			</div>
+			<br><br><br><br>
+			<p id='text3'>
+			<br><br>
+			Just like the pilot sample, <em><b>this sample shows that celebrities with divorced parents have a higher chance (73.3%) of divorcing later in life</b></em>. And again, celebrities with undivorced parents have a lower chance (30.1%)of divorcing later in life. 
+			<br><br>
+			To be clear, it is unknown if a celebrity (with or without divorced parents) will be the one to file the divorce or if their partner will.
+			<br><br><br><br>
+			<em style="font-size: 25px;font-weight: normal;">Implications on Findings,</em>
+			<br><br>
+			- To keep the program simple, only celebrities with two names were selected from the lists. For example "Ben Affleck" has two names so it can be selected but "Robert Downey Jr." has 3 names and "Adele" has only one so the program did not include them in the sample. 
+			<br><br>
+			- Although not as important, the pilot sample has some common celebrity names with the final sample so they aren't completely different.
+			<br><br>
+			</p>
+			<br><br>
+			<span id='date'>14/1/2018</span>
+			<br><br>
+		</p>
+	</center>
+</body>
+</html>
