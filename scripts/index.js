@@ -1,5 +1,5 @@
 	document.getElementById('gmail').addEventListener('click', function() { 
-		window.open('mailto:george.valtas.isb@gmail.com?'); 
+		window.open('mailto:grvaltas@gmail.com?'); 
 	});
 	document.getElementById('github').addEventListener('click', function() { 
 		window.open('https://github.com/gogeorge'); 
