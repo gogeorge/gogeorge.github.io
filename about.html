@@ -4,28 +4,31 @@
 	<title>George | About</title>
 	<link rel="icon" href="images/logo background george.png">
 	<style>
+	html {
+		overflow-y: hidden;
+	}
 	h2 {
-			font-size: 40px;
-			font-family: Helvetica;
-			font-weight: lighter;
-			opacity: 1;
-			text-decoration: none;
-			list-style-type: none;
-			color: black;
-			border: none;
-			background-color: white;
-			position: relative;
-			top: 0px;
-			-webkit-animation: titleMove 3s;
-			animation: titleMove 3s;
-		}
+		font-size: 40px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		opacity: 1;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+		border: none;
+		background-color: white;
+		position: relative;
+		top: 0px;
+		-webkit-animation: titleMove 3s;
+		animation: titleMove 3s;
+	}
 
-		@-webkit-keyframes titleMove {
-			0% {top: -75px;}
-			100% {top: 0px;}
-			0% {opacity: 0;}
-			100% {opacity: 1;}
-		}
+	@keyframes titleMove {
+		0% {top: -75px;}
+		100% {top: 0px;}
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+	}
 	#name {
 		font-family: Helvetica;
 		font-weight: lighter;
@@ -64,7 +67,7 @@
 		0% {opacity: 0;}
 		100% {opacity: 1;}
 	}
-	@-keyframes opacity {
+	@keyframes opacity {
 		0% {opacity: 0;}
 		100% {opacity: 1;}
 	}
@@ -86,57 +89,57 @@
 		0% {opacity: 0;}
 		100% {opacity: 1;}
 	}
-	@-keyframes opacity {
+	@keyframes opacity {
 		0% {opacity: 0;}
 		100% {opacity: 1;}
 	}	
-		#gmail {
-			position: relative; 
-			top: -200px;
-			width: 31px;
-			height: 31px;
-			padding: 0px 25px;
-			-webkit-transition: -webkit-transform 1s;
-    		opacity: 0.6;
-    		-webkit-animation: gmailOp 5s 1;
-    		animation: gmailOp 5s 1;
-    		cursor: pointer;
+	#gmail {
+		position: relative; 
+		top: -200px;
+		width: 31px;
+		height: 31px;
+		padding: 0px 25px;
+		-webkit-transition: -webkit-transform 1s;
+		opacity: 0.6;
+		-webkit-animation: gmailOp 5s 1;
+		animation: gmailOp 5s 1;
+		cursor: pointer;
+	}
+	@-webkit-keyframes gmailOp {
+		0% {opacity: 0;}
+		100% {opacity: 0.6;}
+	}
+	#gmail:hover {
+		-webkit-transform: scale(1.2);
+		opacity: 1;
+	}
+	span {
+		text-indent: 25px;
+		font-family: Helvetica;
+		font-weight: lighter;
+		font-size: 20px;
+		width: 700px;
+		height: 500px;
+		opacity: 1;
+		float: left;
+		position: relative;
+		top: -100px;
+	}
+	@media only screen and (max-device-width: 600px) and (orientation: portrait) {
+		#ageID, p { font-size: 30px;}
+		#gmail { 
+			top: -50px;
+			width: 51px;
+			height: 51px;
 		}
-		@-webkit-keyframes gmailOp {
-			0% {opacity: 0;}
-			100% {opacity: 0.6;}
-		}
-		#gmail:hover {
-			-webkit-transform: scale(1.2);
-			opacity: 1;
-		}
-		span {
-			text-indent: 25px;
-			font-family: Helvetica;
-			font-weight: lighter;
-			font-size: 20px;
-			width: 700px;
-			height: 500px;
-			opacity: 1;
-			float: left;
-			position: relative;
-			top: -100px;
-		}
-		@media only screen and (max-device-width: 600px) and (orientation: portrait) {
-			#ageID, p { font-size: 30px;}
-			#gmail { 
-				top: -50px;
-				width: 51px;
-				height: 51px;
-			}
-			span { top: 50px;}
-		}
+		span { top: 50px;}
+	}
 	</style>
 </head>
 <body>
 	<center>
 		<center><h2>About</h2></center>
-		<a id="name" href="index.html">George Valtas</a>
+		<a id="name" href="index.html">Home</a>
 			<p>I am a computer science student born in Greece and raised in Romania. I am currently living in the Netherlands.
 				If you want to contact me for any reason, please do here:</p>
 		<div id="icons">

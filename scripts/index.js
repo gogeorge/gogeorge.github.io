@@ -4,6 +4,9 @@
 	document.getElementById('github').addEventListener('click', function() { 
 		window.open('https://github.com/gogeorge'); 
 	});
+	document.getElementById('linkedin').addEventListener('click', function() { 
+		window.open('	https://www.linkedin.com/in/george-valtas-1624111bb/'); 
+	});
 
 	//back to top function
 	document.addEventListener('scroll', function() {
