@@ -410,16 +410,28 @@ span {
 } */
 /* mobile size */
 @media screen and (max-device-width: 600px) and (orientation: portrait) {
-	html { zoom: 1.5;}
+	/* html { zoom: 1.5;} */
+	#full_name {
+		font-size: 90px;
+		top: -50px;
+		padding-left: 10px;
+	}
 	.info { font-size: 22px; position: relative;text-indent: 7px;}
-	ul li a { visibility: hidden;}
+	ul li a { 
+		/* visibility: hidden; */
+		font-size: 40px;
+		padding-left: 10px;
+	}
+	#proj_btn {
+		font-size: 60px;
+		/* needs the keyframe to change te fonts size */
+	}
 	.dropdown-content { width: 1000px; text-indent: 20px; font-size: 30px;}
 	.dropdown-content2 { width: 1000px; text-indent: 20px; font-size: 30px;}
-	.dropbtn { font-size: 60px;}
-	.dropbtn2 { position: relative; left: -150px !important; font-size: 60px;}
-	#about { font-size: 60px;}
+	.dropbtn2 { position: relative; left: -150px !important; font-size: 80px;}
+	#about { font-size: 100px;}
 	#img1,#img2,#img3,#img21,#img22 { display: none;}
-	#gmail, #github { transform: scale(1.4);}
+	#gmail, #github, #linkedin { transform: scale(2.3); padding-top: 35px; padding-right: 30px;}
 	#icons { top: 30px; }
 	#back_to_top { visibility: hidden; }
 }

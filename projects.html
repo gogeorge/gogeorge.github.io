@@ -178,7 +178,7 @@
 	<a id="log" href="log.html">Log</a>
 	<center>
 	<br><br>
-	<div id="sortBy">Sort by: <a id="recent">Most Recent</a>, <a id="best">Best</a></div>
+	<div id="sortBy">Sort by: <a id="recent">Most Recent</a></div>
 	<br><br><br><br>
 	</center>
 	<div id='content'>
@@ -224,14 +224,14 @@
 	function load() {
 		//by default projects will be sorted by recent
 		recent.style.color = "grey";
-		best.style.color = "#92005E";
+		// best.style.color = "#92005E";
 		vanish();
 		setTimeout(function() {
 			first.innerHTML = "EasyRegex <span id='date'>(June 2017)<span>" + tagProg() + tagJs();
-			second.innerHTML = "Watch Space <span id='date'>(February 2017)<span>" + tagProg() + tagJs();
+			second.innerHTML = "Watch Space (Archived) <span id='date'>(February 2017)<span>" + tagProg() + tagJs();
 			third.innerHTML = "Bash Profile <span id='date'>(August 2016)<span>" + tagProg() + tagSh();
 			fourth.innerHTML = "Afrodita 1.0 <span id='date'>(May 2016)<span>" + tagDoc();
-			fifth.innerHTML = "Yveete <span id='date'>(March 2016)<span>" + tagProg() + tagJs();
+			fifth.innerHTML = "Yveete (Archived) <span id='date'>(March 2016)<span>" + tagProg() + tagJs();
 
 			first.href = "projects/easy-regex.html";
 			second.href = "projects/watch-space.html";
@@ -244,24 +244,24 @@
 		recent.style.color = "grey";
 		load();
 	}
-	best.onclick = function() {
-		recent.style.color = "#92005E";
-		best.style.color = "grey";
-		vanish();
-		setTimeout(function() {
-			first.innerHTML = "EasyRegex" + tagProg() + tagJs();
-			second.innerHTML = "Yveete" + tagProg() + tagJs();
-			third.innerHTML = "Afrodita 1.0" + tagDoc();
-			fourth.innerHTML = "Watch Space" + tagProg() + tagJs();
-			fifth.innerHTML = "Bash Profile" + tagProg() + tagSh();
+	// best.onclick = function() {
+	// 	recent.style.color = "#92005E";
+	// 	best.style.color = "grey";
+	// 	vanish();
+	// 	setTimeout(function() {
+	// 		first.innerHTML = "EasyRegex" + tagProg() + tagJs();
+	// 		second.innerHTML = "Yveete" + tagProg() + tagJs();
+	// 		third.innerHTML = "Afrodita 1.0" + tagDoc();
+	// 		fourth.innerHTML = "Watch Space" + tagProg() + tagJs();
+	// 		fifth.innerHTML = "Bash Profile" + tagProg() + tagSh();
 
-			first.href = "projects/easy-regex.html";
-			second.href ="projects/yveete.html";
-			third.href = "projects/afrodita.html";
-			fourth.href = "projects/watch-space.html";
-			fifth.href = "projects/bash.html";			
-		}, 600);
-	}
+	// 		first.href = "projects/easy-regex.html";
+	// 		second.href ="projects/yveete.html";
+	// 		third.href = "projects/afrodita.html";
+	// 		fourth.href = "projects/watch-space.html";
+	// 		fifth.href = "projects/bash.html";			
+	// 	}, 600);
+	// }
 	load();
 </script>
 </html>

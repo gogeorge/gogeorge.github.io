@@ -75,8 +75,9 @@
 		</style>
 	</head>
 	<body>
-		<center><h2>Log</h2></center>
+		<center><h2>Log (Archived)</h2></center>
 		<a id="home" href="index.html">Home</a>
+		<!-- 
 		<center>
 			<br><br><br>
 			<p style='color: darkgrey;'>Chronological order of stuff I did.
@@ -107,47 +108,47 @@
 				<br>
 				<a href='projects/yveete.html' id='event'>Yveete <span id='date'>(March 2016)</span></a>
 				<br><br>
-			</div>
+			</div> -->
 		</center>	
 	</body>
 	<script>
-		var d = new Date();
-		//last event needs to be changed when there is a new project (year + month)
-		//var lastEvent = document.getElementsByTagName("A")[1].getAttribute('class')
-		// last event: 6/2017
-		var lastEvent = [6, 2017]
-		console.log(lastEvent)
-		//var now = (+d.getMonth() + +"1") + "" + d.getFullYear()
-		// fix problem with two digit months
-		//var now = d.getFullYear() + "" + (+d.getMonth() + +"1")
-		var now = [+d.getMonth() + +1, d.getFullYear()]
-		console.log(now)
-		//this is my second loop i ever did in my life
+		// var d = new Date();
+		// //last event needs to be changed when there is a new project (year + month)
+		// //var lastEvent = document.getElementsByTagName("A")[1].getAttribute('class')
+		// // last event: 6/2017
+		// var lastEvent = [6, 2017]
+		// console.log(lastEvent)
+		// //var now = (+d.getMonth() + +"1") + "" + d.getFullYear()
+		// // fix problem with two digit months
+		// //var now = d.getFullYear() + "" + (+d.getMonth() + +"1")
+		// var now = [+d.getMonth() + +1, d.getFullYear()]
+		// console.log(now)
+		// //this is my second loop i ever did in my life
 		
-		if (now[1] > lastEvent[1]) {
-			console.log(parseInt(now[1]))
-			console.log('if true')
-			//check if months are equal
-			var years = parseInt(now[1]) - parseInt(lastEvent[1]) - 1
-			console.log("year diff: " + years)
-			//var nowMonths = 12 - now[0]
-			//console.log('now months: ' + nowMonths)
-			var lastEventMonths = 12 - lastEvent[0]
-			console.log('lastEventMonths: ' + lastEventMonths)
-			var n = now[0] + years * 12 + lastEventMonths
-			console.log(n)
-			for (i = 0; i < n; i++) {
-				update.innerHTML += "<br><span>.</span><br>";
-			}
-		} else if (parseInt(now[1]) == parseInt(lastEvent[1])) {
-			if (parseInt(now[0]) > parseInt(lastEvent[0])) {
-				var n = parseInt(now[0]) - parseInt(lastEvent[0])
-				if (n != 0) {
-					for (i = 0; n > i; i++) {
-						update.innerHTML += "<br><span>.</span><br>";
-					}	
-				}
-			}
-		}
+		// if (now[1] > lastEvent[1]) {
+		// 	console.log(parseInt(now[1]))
+		// 	console.log('if true')
+		// 	//check if months are equal
+		// 	var years = parseInt(now[1]) - parseInt(lastEvent[1]) - 1
+		// 	console.log("year diff: " + years)
+		// 	//var nowMonths = 12 - now[0]
+		// 	//console.log('now months: ' + nowMonths)
+		// 	var lastEventMonths = 12 - lastEvent[0]
+		// 	console.log('lastEventMonths: ' + lastEventMonths)
+		// 	var n = now[0] + years * 12 + lastEventMonths
+		// 	console.log(n)
+		// 	for (i = 0; i < n; i++) {
+		// 		update.innerHTML += "<br><span>.</span><br>";
+		// 	}
+		// } else if (parseInt(now[1]) == parseInt(lastEvent[1])) {
+		// 	if (parseInt(now[0]) > parseInt(lastEvent[0])) {
+		// 		var n = parseInt(now[0]) - parseInt(lastEvent[0])
+		// 		if (n != 0) {
+		// 			for (i = 0; n > i; i++) {
+		// 				update.innerHTML += "<br><span>.</span><br>";
+		// 			}	
+		// 		}
+		// 	}
+		// }
 	</script>
 </html>
